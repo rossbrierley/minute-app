@@ -1,0 +1,19 @@
+<div layout="row">
+	<div ng-include="'views/sidenav.html'" layout="column" style="height: calc(100vh - 64px);"></div>
+
+	<div layout="row"  layout-wrap layout-align="start start" layout-padding ng-cloak style="width: 100vw;">
+
+		<div ng-repeat="item in items" class="fx-fade-up fx-speed-{{500 + $index * 200}} fx-easing-back">
+			<md-card md-whiteframe="4" ng-click="openDocument($index)" style="width: 125px;">
+				<md-card-title>
+					<md-card-title-media style="margin: 0 auto;">
+						<img src="https://amitasaurus.github.io/documentReader/word.png">
+					</md-card-title-media>
+				</md-card-title>
+				<md-card-content>
+					<span flex md-truncate style="text-align: center;">{{item}}</span>
+				</md-card-content>
+			</md-card>
+		</div>
+	</div>
+</div>

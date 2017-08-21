@@ -1,0 +1,35 @@
+<style>
+table {
+    border-collapse: collapse;
+	
+}
+
+table, th, td {
+    border: 1px solid black;
+	padding: 13px;
+    margin: 17px;
+}
+
+</style>
+
+
+<md-dialog aria-label="{{current.name}}" >
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{current.name + '.' + current.type}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon class="material-icons">close</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content >
+      <div ng-controller="allFilesCtrl" >
+      <div contenteditable ng-model="m" style="margin: 20px;">
+   <p ng-bind-html="m"></p>
+    </div>
+   <!--<button class="btn btn-success" ng-click=editFile()> Save </button>-->
+     
+      </div>
+    </md-dialog-content>
+</md-dialog>

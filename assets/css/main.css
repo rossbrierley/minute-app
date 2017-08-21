@@ -1,0 +1,24 @@
+md-list-item .md-list-item-inner>md-icon:first-child:not(.md-avatar-icon), md-list-item>md-icon:first-child:not(.md-avatar-icon){
+	vertical-align: middle;
+	margin-top: 11px;
+}
+md-list-item .md-button {
+	width: 100%;
+}
+md-list .md-button.selected {
+	color: #03a9f4;
+}
+md-dialog.md-dialog-fullscreen {
+    min-height: 100%;
+    min-width: 100%;
+    border-radius: 0;
+}
+iframe {
+    display: block;  
+    height: 100vh; 
+}
+table.md-table td.md-cell {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

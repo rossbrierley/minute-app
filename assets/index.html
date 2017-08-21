@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="fileManager" >
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+		<meta charset="UTF-8">
+		<meta https-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1 , maximum-scale=1 , user-scalable=no">
+
+		  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+  		<!-- Angular Material style sheet -->
+  		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <!-- My Stylesheets -->
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/md-data-table.css">
+</head>
+
+
+<body ng-cloak ng-controller="mainCtrl" layout="column">
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <button class="md-button md-ink-ripple hide-gt-sm layout-align-center-center layout-row" type="button" ng-click="toggleSidenav()" aria-label="Side Panel" layout="row" layout-align="center center">
+            <md-icon class="material-icons">menu</md-icon>
+        </button>
+        <h2 flex md-truncate><img src="images/logo.png" style="    width: 123px;
+    margin-left: 45px;"></h2>
+        <span flex></span>
+        <button ng-show="isLoggedIn" class="md-button md-ink-ripple" ng-click="logout()">
+        <md-icon class="material-icons">input</md-icon>
+            <md-tooltip md-direction="bottom">Logout</md-tooltip>
+        </button>
+    </div>
+
+</md-toolbar>
+    <md-content flex>
+      <ng-view></ng-view>
+        <ui-view></ui-view>
+    </md-content>
+
+
+  <!-- Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js"></script>
+  <script src="bower_components/ng-file-upload-shim.min.js"></script>
+  <script src="bower_components/ng-file-upload.min.js"></script>
+  <script src="bower_components/angular-base64/angular-base64.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script> 
+  <script src="bower_components/ng-fx.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js" integrity="sha256-FMocp8pp1WruAK6GtjNDtuGAALCt/dCsVtw7oSjvPX0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.6.0/angular-local-storage.min.js"></script>
+
+  <!-- application bootstrap  -->
+  <script src="js/app.js"></script>
+  <script src="js/controllers/mainCtrl.js"></script>
+  <script src="js/controllers/uploadCtrl.js"></script>
+  <script src="js/controllers/allFilesCtrl.js"></script>
+  <script src="js/controllers/loginCtrl.js"></script>
+  <script src="js/controllers/signupCtrl.js"></script>
+<script src="js/controllers/addMeetingCtrl.js"></script>
+<script src="js/controllers/previousMinuteController.js"></script>
+<script src="js/controllers/viewMinuteController.js"></script>
+  <script src="js/services/dataServices.js"></script>
+        <script src="js/services/dataService.js"></script>
+  <script src="js/services/dialogService.js"></script>
+  <script src="js/services/auth.js"></script>
+<script src="js/md-data-table.js"></script>
+</body>
+</html>

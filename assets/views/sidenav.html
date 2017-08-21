@@ -1,0 +1,46 @@
+
+
+
+
+<md-sidenav
+        class="md-sidenav-left"
+        md-component-id="left"
+        md-is-locked-open="$mdMedia('gt-sm')"
+        md-whiteframe="4"
+        flex>
+      <md-content>
+        <md-list>
+          <md-list-item class="md-2-line" ng-click="goTo('/upload')">
+          <md-icon class="material-icons">cloud_upload</md-icon>
+          <div class="md-list-item-text">
+            <h3>File Upload</h3>
+          </div>
+        </md-list-item>
+        </md-list>
+        <md-list>
+          <md-list-item class="md-2-line" ng-click="goTo('/all')">
+          <md-icon class="material-icons">folder</md-icon>
+          <div class="md-list-item-text">
+            <h3>All files</h3>
+          </div>
+        </md-list-item>
+        </md-list>
+        <md-list>
+          <md-list-item class="md-2-line" ng-click="goTo('/previousMeetings')">
+            <md-icon class="material-icons">folder</md-icon>
+            <div class="md-list-item-text">
+              <h3>Previous Meetings</h3>
+            </div>
+          </md-list-item>
+        </md-list>
+        <md-list>
+          <md-list-item class="md-2-line" ng-click="goTo('/newMeeting')">
+            <md-icon class="material-icons">folder</md-icon>
+            <div class="md-list-item-text">
+              <h3>Add New Meeting</h3>
+            </div>
+          </md-list-item>
+        </md-list>
+      </md-content>
+
+</md-sidenav>

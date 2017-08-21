@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2c9959d6-e92b-40cd-850e-e0acf44a8870" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="mainController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/controller/mainController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="81" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/controllers/loginCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="76" column="40" lean-forward="true" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="allFilesCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/controllers/allFilesCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/views/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="previousMinuteController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/controllers/previousMinuteController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="50" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewMinute.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/views/viewMinute.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="30" />
+              <folding>
+                <element signature="n#style#0;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#md-table-container#0;n#md-card#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="previousMeetings.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/views/previousMeetings.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="54" column="64" lean-forward="false" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#md-table-container#0;n#md-card#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>router</find>
+      <find>dosignin</find>
+      <find>data</find>
+      <find>dosig</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/assets/js/controllers/uploadCtrl.js" />
+        <option value="$PROJECT_DIR$/assets/views/signup.html" />
+        <option value="$PROJECT_DIR$/assets/views/navigation.html" />
+        <option value="$PROJECT_DIR$/assets/views/allFiles.html" />
+        <option value="$PROJECT_DIR$/assets/views/upload.html" />
+        <option value="$PROJECT_DIR$/assets/views/sidenav.html" />
+        <option value="$PROJECT_DIR$/assets/js/md-data-table.js" />
+        <option value="$PROJECT_DIR$/assets/css/md-data-table.css" />
+        <option value="$PROJECT_DIR$/assets/css/main.css" />
+        <option value="$PROJECT_DIR$/assets/views/addMeetings.html" />
+        <option value="$PROJECT_DIR$/assets/views/addMinute-dialog.html" />
+        <option value="$PROJECT_DIR$/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/assets/js/controllers/allFilesCtrl.js" />
+        <option value="$PROJECT_DIR$/assets/js/controllers/addMeetingCtrl.js" />
+        <option value="$PROJECT_DIR$/assets/js/services/dataservices.js" />
+        <option value="$PROJECT_DIR$/assets/views/edit-dialog.html" />
+        <option value="$PROJECT_DIR$/assets/js/controllers/viewMinuteController.js" />
+        <option value="$PROJECT_DIR$/assets/views/previousMeetings.html" />
+        <option value="$PROJECT_DIR$/assets/js/controllers/mainCtrl.js" />
+        <option value="$PROJECT_DIR$/assets/views/login.html" />
+        <option value="$PROJECT_DIR$/assets/js/controllers/signupCtrl.js" />
+        <option value="$PROJECT_DIR$/assets/js/controllers/loginCtrl.js" />
+        <option value="$PROJECT_DIR$/assets/views/viewMinute.html" />
+        <option value="$PROJECT_DIR$/assets/js/controllers/previousMinuteController.js" />
+        <option value="$PROJECT_DIR$/assets/index.html" />
+        <option value="$PROJECT_DIR$/server/app.js" />
+        <option value="$PROJECT_DIR$/server/controller/mainController.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/server/node_modules" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="document" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c9959d6-e92b-40cd-850e-e0acf44a8870" name="Default" comment="" />
+      <created>1503036167597</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1503036167597</updated>
+      <workItem from="1503036175274" duration="2675000" />
+      <workItem from="1503042741718" duration="19651000" />
+      <workItem from="1503079925659" duration="8239000" />
+      <workItem from="1503129179923" duration="36736000" />
+      <workItem from="1503203771280" duration="8527000" />
+      <workItem from="1503244744278" duration="3616000" />
+      <workItem from="1503290184556" duration="6349000" />
+      <workItem from="1503303916470" duration="31073000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="116866000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23298033" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23298033" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/lib/googleauth.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/lib/googleauth.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/lib/apirequest.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/lib/apirequest.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/lib/googleapis.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/lib/googleapis.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/lib/discovery.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/lib/discovery.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/ml/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/ml/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/ml/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/ml/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dlp/v2beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dlp/v2beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dns/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dns/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dns/v2beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dns/v2beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/iam/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/iam/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/plus/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/plus/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/admin/reports_v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/admin/reports_v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/admin/datatransfer_v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/admin/datatransfer_v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/admin/directory_v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/admin/directory_v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/books/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/books/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/drive/v3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/drive/v3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/drive/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/drive/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/games/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/games/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/gmail/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/gmail/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/tasks/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/tasks/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/mirror/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/mirror/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/oauth2/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/oauth2/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/oauth2/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/oauth2/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/people/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/people/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/pubsub/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/pubsub/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/pubsub/v1beta1a.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/pubsub/v1beta1a.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/pubsub/v1beta2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/pubsub/v1beta2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/script/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/script/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/sheets/v4.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/sheets/v4.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/slides/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/slides/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/speech/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/speech/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/speech/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/speech/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/vision/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/vision/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adsense/v1.3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adsense/v1.3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adsense/v1.4.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adsense/v1.4.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/blogger/v3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/blogger/v3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/blogger/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/blogger/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/compute/beta.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/compute/beta.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/compute/alpha.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/compute/alpha.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/compute/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/compute/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/content/v2sandbox.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/content/v2sandbox.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/content/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/content/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/fitness/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/fitness/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/logging/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/logging/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/logging/v2beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/logging/v2beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/oslogin/v1alpha.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/oslogin/v1alpha.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/spanner/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/spanner/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/storage/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/storage/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/storage/v1beta2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/storage/v1beta2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/storage/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/storage/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/surveys/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/surveys/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/youtube/v3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/youtube/v3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appstate/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appstate/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/bigquery/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/bigquery/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/calendar/v3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/calendar/v3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudkms/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudkms/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dataflow/v1b3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dataflow/v1b3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dataproc/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dataproc/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dataproc/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dataproc/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/genomics/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/genomics/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/genomics/v1alpha2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/genomics/v1alpha2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/kgsearch/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/kgsearch/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/language/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/language/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/language/v1beta2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/language/v1beta2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/language/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/language/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/partners/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/partners/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/reseller/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/reseller/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/spectrum/v1explorer.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/spectrum/v1explorer.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/sqladmin/v1beta3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/sqladmin/v1beta3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/sqladmin/v1beta4.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/sqladmin/v1beta4.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/webfonts/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/webfonts/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/analytics/v3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/analytics/v3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/analytics/v2.4.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/analytics/v2.4.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appengine/v1alpha.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appengine/v1alpha.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appengine/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appengine/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appengine/v1beta.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appengine/v1beta.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appengine/v1beta4.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appengine/v1beta4.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appengine/v1beta5.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appengine/v1beta5.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/civicinfo/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/civicinfo/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/classroom/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/classroom/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/container/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/container/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/datastore/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/datastore/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/datastore/v1beta3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/datastore/v1beta3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/discovery/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/discovery/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/licensing/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/licensing/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/taskqueue/v1beta2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/taskqueue/v1beta2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/taskqueue/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/taskqueue/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/translate/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/translate/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudbuild/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudbuild/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudtrace/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudtrace/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudtrace/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudtrace/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/monitoring/v3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/monitoring/v3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/prediction/v1.3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/prediction/v1.3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/prediction/v1.4.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/prediction/v1.4.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/prediction/v1.2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/prediction/v1.2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/prediction/v1.6.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/prediction/v1.6.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/prediction/v1.5.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/prediction/v1.5.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/qpxExpress/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/qpxExpress/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/sourcerepo/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/sourcerepo/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/tagmanager/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/tagmanager/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/tagmanager/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/tagmanager/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/webmasters/v3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/webmasters/v3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adsensehost/v4.1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adsensehost/v4.1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/plusDomains/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/plusDomains/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/replicapool/v1beta2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/replicapool/v1beta2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/replicapool/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/replicapool/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/serviceuser/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/serviceuser/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/toolresults/v1beta3firstparty.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/toolresults/v1beta3firstparty.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/toolresults/v1beta3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/toolresults/v1beta3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appsactivity/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/appsactivity/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudbilling/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudbilling/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/customsearch/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/customsearch/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dfareporting/v2.8.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dfareporting/v2.8.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dfareporting/v2.7.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/dfareporting/v2.7.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/fusiontables/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/fusiontables/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/fusiontables/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/fusiontables/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/safebrowsing/v4.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/safebrowsing/v4.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/urlshortener/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/urlshortener/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/clouddebugger/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/clouddebugger/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/firebaserules/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/firebaserules/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/manufacturers/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/manufacturers/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/resourceviews/v1beta2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/resourceviews/v1beta2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/resourceviews/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/resourceviews/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/runtimeconfig/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/runtimeconfig/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/runtimeconfig/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/runtimeconfig/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/searchconsole/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/searchconsole/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudfunctions/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudfunctions/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudfunctions/v1beta2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudfunctions/v1beta2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/groupssettings/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/groupssettings/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/servicecontrol/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/servicecontrol/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangebuyer/v1.3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangebuyer/v1.3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangebuyer/v1.4.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangebuyer/v1.4.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangebuyer/v1.2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangebuyer/v1.2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudmonitoring/v2beta2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudmonitoring/v2beta2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/consumersurveys/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/consumersurveys/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/gamesManagement/v1management.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/gamesManagement/v1management.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/groupsmigration/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/groupsmigration/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/identitytoolkit/v3.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/identitytoolkit/v3.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/pagespeedonline/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/pagespeedonline/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/pagespeedonline/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/pagespeedonline/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/proximitybeacon/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/proximitybeacon/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/storagetransfer/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/storagetransfer/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangebuyer2/v2beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangebuyer2/v2beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangeseller/v1.1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangeseller/v1.1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangeseller/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangeseller/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangeseller/v2.0.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexchangeseller/v2.0.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/androidpublisher/v1.1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/androidpublisher/v1.1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/androidpublisher/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/androidpublisher/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/androidpublisher/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/androidpublisher/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/siteVerification/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/siteVerification/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/youtubeAnalytics/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/youtubeAnalytics/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/youtubeAnalytics/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/youtubeAnalytics/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/youtubereporting/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/youtubereporting/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/androidenterprise/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/androidenterprise/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/clouduseraccounts/vm_beta.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/clouduseraccounts/vm_beta.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/clouduseraccounts/beta.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/clouduseraccounts/beta.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/clouduseraccounts/alpha.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/clouduseraccounts/alpha.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/clouduseraccounts/vm_alpha.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/clouduseraccounts/vm_alpha.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/deploymentmanager/v2beta.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/deploymentmanager/v2beta.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/deploymentmanager/alpha.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/deploymentmanager/alpha.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/deploymentmanager/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/deploymentmanager/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/doubleclicksearch/v2.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/doubleclicksearch/v2.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/playmoviespartner/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/playmoviespartner/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/servicemanagement/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/servicemanagement/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/videointelligence/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/videointelligence/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexperiencereport/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/adexperiencereport/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/analyticsreporting/v4.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/analyticsreporting/v4.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/gamesConfiguration/v1configuration.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/gamesConfiguration/v1configuration.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/replicapoolupdater/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/replicapoolupdater/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/clouderrorreporting/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/clouderrorreporting/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/bigquerydatatransfer/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/bigquerydatatransfer/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudresourcemanager/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudresourcemanager/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudresourcemanager/v2beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudresourcemanager/v2beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudresourcemanager/v1beta1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/cloudresourcemanager/v1beta1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/firebasedynamiclinks/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/firebasedynamiclinks/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/doubleclickbidmanager/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/doubleclickbidmanager/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/acceleratedmobilepageurl/v1.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/apis/acceleratedmobilepageurl/v1.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/scripts/generate.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/scripts/generate.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/scripts/generator_utils.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/scripts/generator_utils.js.map" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/scripts/generator.js" />
+        <option value="$PROJECT_DIR$/server/node_modules/googleapis/scripts/generator.js.map" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/controller/mainController.js</url>
+          <line>247</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/previousMeetings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#md-table-container#0;n#md-card#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/mainController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/services/dataservices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="50" lean-forward="false" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/sidenav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/allFiles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="61" lean-forward="true" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/controllers/signupCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/controllers/allFilesCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="10" lean-forward="true" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/mainController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/controllers/mainCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/sidenav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/controllers/uploadCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/files.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/controllers/uploadCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/navigation.html" />
+    <entry file="file://$PROJECT_DIR$/assets/views/allFiles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="6" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="79" lean-forward="false" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/md-data-table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="1485" column="20" lean-forward="false" selection-start-line="1485" selection-start-column="20" selection-end-line="1485" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/services/rootRef.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/md-data-table.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="393" column="1" lean-forward="false" selection-start-line="393" selection-start-column="1" selection-end-line="393" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/services/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/services/dataService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/sidenav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/node_modules/express/lib/response.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/addMinute-dialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="111" lean-forward="true" selection-start-line="11" selection-start-column="111" selection-end-line="11" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/addMeetings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="82" lean-forward="false" selection-start-line="25" selection-start-column="82" selection-end-line="25" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/controllers/addMeetingCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="68" lean-forward="false" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/services/dataservices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="18" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/controllers/viewMinuteController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/edit-dialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="51" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/controllers/mainCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="171" lean-forward="false" selection-start-line="2" selection-start-column="171" selection-end-line="2" selection-end-column="171" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/controllers/signupCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/controllers/loginCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/previousMeetings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="54" column="64" lean-forward="false" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#md-table-container#0;n#md-card#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/viewMinute.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#md-table-container#0;n#md-card#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/controllers/previousMinuteController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="50" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="76" column="40" lean-forward="true" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/controllers/allFilesCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/mainController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="81" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,22 @@
+<md-content class="md-padding" layout="column" layout-align="center center" layout-wrap>
+<h1>Login </h1>
+<md-card class="md-padding" style="width:500px;">
+<form>
+<md-input-container class="md-icon-float md-block">
+      <label>Email</label>
+
+      <input ng-model="user.email" type="text">
+</md-input-container>
+<md-input-container class="md-icon-float md-block">
+      <label>Password</label>
+
+      <input ng-model="user.password" type="password">
+</md-input-container>
+<br layout="row" layout-align="center center">
+<md-button class="md-raised md-primary" ng-click="userLogin(user)">Login</md-button>
+</br>
+      <p>Don't have an account ? <a ui-sref="signup">Register</a></p>
+</div>
+</form>
+</md-card>
+</md-content>

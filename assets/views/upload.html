@@ -1,0 +1,19 @@
+<div layout="row">
+    <div ng-include="'views/sidenav.html'" layout="column" style="height: calc(100vh - 64px);"></div>
+
+    <md-content class="md-padding" layout="column" layout-align="start center" style="width:100vw;">
+
+        <md-button style="padding: 0px;margin: 0px;" aria-label="file upload" ngf-select="upload($files)">
+            <md-card style="width: 300px;margin: 0px;" md-whiteframe="8">
+                click here and Upload your file
+            </md-card>
+        </md-button>
+        </br>
+        <md-progress-linear md-mode="determinate" value="{{determinateValue}}" style="
+    width: 300px;
+" ng-if="!!determinateValue"></md-progress-linear>
+
+    </md-content>
+
+</div>
+

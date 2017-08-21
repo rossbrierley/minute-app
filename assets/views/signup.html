@@ -1,0 +1,26 @@
+<md-content class="md-padding" layout="column" layout-align="center center" layout-wrap>
+    <h1>Signup </h1>
+    <md-card class="md-padding" style="width:500px;">
+        <form>
+            <md-input-container class="md-icon-float md-block">
+                <label>Name</label>
+                <input ng-model="newUser.name" type="text">
+            </md-input-container>
+            <md-input-container class="md-icon-float md-block">
+                <label>Email</label>
+                <input ng-model="newUser.email" type="text">
+            </md-input-container>
+            <md-input-container class="md-icon-float md-block">
+                <label>Password</label>
+                <input ng-model="newUser.password" type="password">
+            </md-input-container>
+            <md-input-container class="md-icon-float md-block">
+                <label>Confirm Password</label>
+                <input ng-model="newUser.password_confirm" type="password">
+            </md-input-container>
+            <div layout="row" layout-align="center center">
+                <md-button class="md-raised md-primary" ng-click="newUserSignup(newUser)">Register</md-button>
+            </div>
+        </form>
+    </md-card>
+</md-content>
