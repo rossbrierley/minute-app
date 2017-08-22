@@ -28,8 +28,14 @@
                 fetchMinutes: function (data) {
                     return $http.post('/minutes/index', data);
                 },
+                fetchCategory: function (data) {
+                    return $http.post('/tags/index', data);
+                },
                 doEdit: function (data) {
                     return $http.post('/minute/edit', data);
+                },
+                doTag: function (data) {
+                    return $http.post('/tag/add', data);
                 },
                 isVerified: function(user_email, user_role) {
                     var verificationObj = {

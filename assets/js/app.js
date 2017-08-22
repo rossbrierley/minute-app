@@ -1,7 +1,6 @@
 (function(){
-	angular.module('fileManager',['ui.router','ngRoute','LocalStorageModule', 'ngMaterial', 'ngMdIcons', 'ng-fx', 'ngAnimate','ngFileUpload','base64','ngSanitize','md.data.table'])
+	angular.module('fileManager',['ui.router','ngRoute','LocalStorageModule', 'ngMaterial', 'ngMdIcons', 'ng-fx', 'ngAnimate','ngFileUpload','base64','ngSanitize','md.data.table','htmlToPdfSave'])
 	.config(['$stateProvider', '$mdThemingProvider','$urlRouterProvider', function($stateProvider, $mdThemingProvider,$urlRouterProvider) {
-        $urlRouterProvider.otherwise('/');
         $stateProvider
             .state('/', {
                 url: '/login',
@@ -41,6 +40,18 @@
             	url: '/newMeeting',
                 templateUrl: '/views/addMeetings.html',
                 controller: 'addMeetingCtrl',
+                resolve : {
+                    "isLoggedIn": function($state){
+                        if(!sessionStorage.isLoggedIn){
+                            $state.go('/');
+                        }
+                    }
+                }
+            })
+            .state('settings', {
+                url: '/settings',
+                templateUrl: '/views/settings.html',
+                controller: 'tagCtrl',
                 resolve : {
                     "isLoggedIn": function($state){
                         if(!sessionStorage.isLoggedIn){

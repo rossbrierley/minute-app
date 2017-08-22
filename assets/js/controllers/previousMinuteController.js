@@ -10,11 +10,20 @@
                 };
                 console.log(sessionStorage);
 
+            $scope.hideIt = true;
             $scope.downloadPDF = function () {
-                var pdf = new jsPDF('p', 'pt', 'a4');
-                pdf.addHTML(document.getElementById('pdf'), function () {
-                    pdf.save('minute.pdf');
+                var doc = new jsPDF();
+                var specialElementHandlers = {
+                    '#hide': function (element, renderer) {
+                        return true;
+                    }
+                };
+                doc.fromHTML(document.getElementById('pdf'), 15, 15, {
+                    'width': 170,
+                    'elementHandlers': specialElementHandlers
                 });
+                doc.save('minute.pdf');
+
             }
               dataServices.fetchMinutes(data).then(function (response) {
 
@@ -95,10 +104,6 @@
                     };
                 }
             };
-            function genPDF() {
-                var doc= new jsPdf();
 
-                
-            }
         }]);
 })();
