@@ -18,9 +18,10 @@
                 <label>Confirm Password</label>
                 <input ng-model="newUser.password_confirm" type="password">
             </md-input-container>
-            <div layout="row" layout-align="center center">
+            <br layout="row" layout-align="center center">
                 <md-button class="md-raised md-primary" ng-click="newUserSignup(newUser)">Register</md-button>
-            </div>
+            </br>
+            <p>Already have an account ? <a ui-sref="/">Login</a></p>
         </form>
     </md-card>
 </md-content>

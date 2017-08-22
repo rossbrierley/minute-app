@@ -1,3 +1,5 @@
+
+
 <div layout="row">
     <div ng-include="'views/sidenav.html'" layout="column" style="height: calc(100vh - 64px);"></div>
 
@@ -6,10 +8,10 @@
             <div layout="row">
                 <md-subheader class="md-primary">Faculty Summit</md-subheader>
                 <span flex></span>
-                <md-button class="md-raised md-primary" ng-click="downloadPDF()">Export PDF</md-button>
+                <md-button class="md-raised md-primary" pdf-save-button="one" pdf-name="minutes.pdf">Export PDF</md-button>
 
             </div>
-            <md-card  id="pdf">
+            <md-card  pdf-save-content="one">
                 <md-table-container>
                     <table md-table>
                         <thead md-head>
@@ -26,12 +28,12 @@
                             <td md-cell></td>
                         </tr>
                         <tr md-row md-select md-auto-select>
-                            <td md-cell>Presents</td>
+                            <td md-cell>Present</td>
                             <td md-cell>{{thisMeet.presents}}</td>
                             <td md-cell></td>
                         </tr>
                         <tr md-row md-select md-auto-select ng-repeat="meeting in thisMeet.minutes">
-                            <td md-cell>{{thisMeet.tag + '-' + '00' + $index}}</td>
+                            <td md-cell>{{thisMeet.tag.code + '-' + '00' + ($index+1)}}</td>
                             <td md-cell>{{meeting.bullet_points}}</td>
                            <td md-cell style="text-align: right;">
                                 <md-button class="md-icon-button" aria-label="Edit" ng-click="edit($index)">

@@ -4,26 +4,44 @@
     <div layout="row"  layout-wrap layout-align="start start" layout-padding ng-cloak style="width: 100vw;">
         <md-content class="md-padding" layout="column" layout-align="center center" >
             <h1>Add Meeting</h1>
-            <md-card class="md-padding" style="width: 50vw;">
+            <md-card class="md-padding" style="width: 80vw;">
                 <form name="addMeeting">
                     <md-input-container class="md-icon-float md-block">
-                        <label>Meeting Name</label>
+                        <label>Title of the Meeting</label>
                         <input ng-model="newMeeting.meetingName" type="text" required>
                     </md-input-container>
                     <md-input-container class="md-icon-float md-block">
-                        <label>Presents</label>
+                        <label>Faculty Present</label>
                         <textarea ng-model="newMeeting.presents"  rows="3" md-select-on-focus required></textarea>
                     </md-input-container>
                     <md-input-container class="md-icon-float md-block">
-                        <label>Meeting minute</label>
+                        <label>Meeting Minutes</label>
                         <textarea ng-model="newMeeting.minute" rows="5" md-select-on-focus required></textarea>
                     </md-input-container>
-                    <md-input-container class="md-icon-float md-block">
-                        <label>Tag</label>
-                        <input ng-model="newMeeting.tag" type="text" required>
-                    </md-input-container>
+
+                    <!-- autocomplete -->
+
+                    <md-autocomplete md-selected-item="newMeeting.tag"
+                                     md-search-text="searchText"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in tags | filter:searchText"
+                                     md-item-text="item.code"
+                                     md-min-length="2"
+                                     placeholder="enter an tag name"
+                                     md-floating-label="Tag">
+                        <md-item-template>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.group_name}} - {{item.code}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No tag/category matching "{{searchText}}" was found.
+                        </md-not-found>
+                    </md-autocomplete>
+
+
+
+
                     <div layout="row" layout-align="start center">
-                        <md-button class="md-raised md-primary" ng-click="sendMeet()" ng-disabled="addMeeting.$invalid">Submit</md-button>
+                        <md-button class="md-raised md-primary" ng-click="sendMeet(newMeeting)" ng-disabled="addMeeting.$invalid">Submit</md-button>
                     </div>
                 </form>
             </md-card>

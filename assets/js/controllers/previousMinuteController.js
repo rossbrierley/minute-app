@@ -10,12 +10,23 @@
                 };
                 console.log(sessionStorage);
 
+           /* var doc = new jsPDF();
+            var specialElementHandlers = {
+                '#hide': function (element, renderer) {
+                    return true;
+                }
+            };
             $scope.downloadPDF = function () {
-                var pdf = new jsPDF('p', 'pt', 'a4');
-                pdf.addHTML(document.getElementById('pdf'), function () {
-                    pdf.save('minute.pdf');
+
+                var source = document.getElementById('pdf');
+
+                doc.fromHTML(source , 15, 15, {
+                    'width': 170,
+                    'elementHandlers': specialElementHandlers
                 });
-            }
+                doc.save('minute.pdf');
+
+            } */
               dataServices.fetchMinutes(data).then(function (response) {
 
                   console.log(response.data.msg);
@@ -95,10 +106,6 @@
                     };
                 }
             };
-            function genPDF() {
-                var doc= new jsPdf();
 
-                
-            }
         }]);
 })();

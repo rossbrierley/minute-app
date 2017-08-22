@@ -2,18 +2,22 @@
     <md-dialog-content>
         <md-toolbar class="md-hue-2">
             <div class="md-toolbar-tools">
-                <h2 flex md-truncate>Add Minute</h2>
+                <h2 flex md-truncate>Add Category / Tag</h2>
             </div>
         </md-toolbar>
         <form layout-padding>
             <div layout="row">
                 <md-input-container class="md-block" flex>
-                    <label>Description</label>
-                    <textarea ng-model="description" md-select-on-focus></textarea>
+                    <label>Group</label>
+                    <input ng-model="tag.group" md-select-on-focus>
+                </md-input-container>
+                <md-input-container class="md-block" flex>
+                    <label>Code</label>
+                    <input ng-model="tag.code" md-select-on-focus>
                 </md-input-container>
             </div>
             <div layout="row" layout-align="end center">
-                <md-button ng-click="submit()">Submit</md-button>
+                <md-button ng-click="submit(tag)">Submit</md-button>
             </div>
         </form>
     </md-dialog-content>

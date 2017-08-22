@@ -11,14 +11,13 @@ var MongoClient = require('mongodb').MongoClient;
 var url ="mongodb://wcbcfilemanager:amrita123A@ds155587.mlab.com:55587/minutesapp";
 var assert= require('assert');
 var html;
-
 exports.upload = (req,res,err)=>{
     console.log(req.file);
 }
 exports.allFiles=(req,res,err)=>{
     var filename=[];
 const Folder = 'server/uploads/';
-   // const Folder = './uploads/';
+//const Folder = './uploads/';
     fs.readdir(Folder, (err, files) => {
         files.forEach(file => {
         filename.push(file);
@@ -31,7 +30,7 @@ exports.showFile=(req,res,err)=>{
     var filename= req.body.filename;
     console.log(filename);
 mammoth.convertToHtml({path: "server/uploads/"+filename})
- //   mammoth.convertToHtml({path: "./uploads/"+filename})
+//   mammoth.convertToHtml({path: "./uploads/"+filename})
         .then(function(result){
             html = result.value; // The generated HTML
             res.send({"data":html,"filename":filename});
@@ -40,13 +39,39 @@ mammoth.convertToHtml({path: "server/uploads/"+filename})
 
         .done();
 };
+
+exports.category=(req,res,err)=>{
+    var group=req.body.group;
+    var code=req.body.code;
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var myobj = {group_name: group, code: code};
+        db.collection("category").insertOne(myobj, function (err, result) {
+            if (err) throw err;
+            console.log(result)
+            console.log("tag added successfully");
+            if (err) {
+                res.statusCode = 500;
+                res.statusText = "Internal Server Error";
+                return;
+            }
+            res.statusCode = 200;
+            res.statusText = "ok";
+            res.send({msg: "tag successfully added", success: true, statusCode: 200});
+            return;
+        });
+    });
+
+};
+
+
 exports.editFile =(req,res,err)=>{
     var data=req.body;
     var docx = officeClippy.docx;
     var exporter = officeClippy.exporter;
     var doc = docx.create();
-var output = fs.createWriteStream('server/uploads/'+data.filename);
-//    var output = fs.createWriteStream('./uploads/'+data.filename);
+//var output = fs.createWriteStream('server/uploads/'+data.filename);
+   var output = fs.createWriteStream('./uploads/'+data.filename);
     var paragraph = docx.createParagraph(data.data);
     doc.addParagraph(paragraph);
     exporter.local(output, doc);
@@ -174,6 +199,8 @@ exports.newMeeting = (req,res,err)=>
         }
 
     });
+
+
 };
 
 exports.signup = (req,res,err)=>{
@@ -213,6 +240,37 @@ exports.signup = (req,res,err)=>{
 
     });
 
+};
+exports.fetchCategory = (req,res,err) => {
+    console.log("Inside this function");
+    var email = req.body.email;
+    var authToken = req.body.auth_token;
+    authenticateUser("category", email, authToken, function (response) {
+        console.log("inside if");
+        MongoClient.connect(url,function (err, db) {
+            if(err){
+                res.statusCode = 500;
+                res.statusText = "Internal Server Error";
+                return;
+            }
+            db.collection("category").find({}).toArray(function (err,result) {
+                if(err){
+                    res.statusText = "Internal Server Error";
+                    res.statusCode  = 500;
+                    return;
+                }
+                res.statusCode = 200;
+                res.statusText = "Ok";
+                res.send({msg: "", success: true, data: result});
+                return;
+            });
+            db.close();
+        });
+    }, function (error) {
+        res.statusText = "Authentication Error";
+        res.statusCode = 401;
+        return;
+    });
 };
 
 exports.fetchMinutes = (req,res,err) => {

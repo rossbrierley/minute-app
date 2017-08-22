@@ -19,8 +19,8 @@ var jsonParser = bodyParser.json()
 app.use(cors());
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-   cb(null, 'server/uploads/')
-   // cb(null, './uploads/')
+  cb(null, 'server/uploads/')
+  //  cb(null, './uploads/');
   },
   filename: function (req, file, cb) {
     crypto.pseudoRandomBytes(16, function (err, raw) {
@@ -34,8 +34,10 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 app.post('/login/user',jsonParser, mainController.login);
 app.post('/signup/newUser',jsonParser, mainController.signup);
+app.post('/tag/add',jsonParser, mainController.category);
 app.post('/addMeetings/newMeeting',jsonParser, mainController.newMeeting);
 app.post('/minutes/index', jsonParser, mainController.fetchMinutes);
+app.post('/tags/index', jsonParser, mainController.fetchCategory);
 app.post('/upload', upload.single('file'),mainController.upload);
 app.post('/allfiles',mainController.allFiles);
 app.post('/show',jsonParser,mainController.showFile);
@@ -47,5 +49,5 @@ var server = app.listen(process.env.PORT||8080, function () {
    
    console.log("Example app listening at http://%s:%s", host, port); 
 })
-//server.listen(80, '111.111.111.111');
+
 
