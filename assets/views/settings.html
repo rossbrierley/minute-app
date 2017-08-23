@@ -3,38 +3,62 @@
 <div layout="row">
     <div ng-include="'views/sidenav.html'" layout="column" style="height: calc(100vh - 64px);"></div>
 
-    <div layout="row" flex layout-fill layout-wrap layout-align="start start" layout-padding ng-cloak style="width: 100vw;">
+    <div layout="row" flex layout-fill layout-wrap layout-align="start start" ng-cloak style="width: 100vw;">
         <div class="example-container mat-elevation-z8" style="width: 100vw;">
-            <div layout="row">
-                <md-subheader class="md-primary">Settings</md-subheader>
-                <span flex></span>
 
-
-            </div>
-            <md-card  id="pdf">
-                <md-table-container>
-                    <table md-table>
+            <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab label="tags">
+                    <md-content class="md-padding">
+                        <div layout="row" layout-align="end center">
+                        <md-button class="md-primary md-raised" ng-click="addtag()">
+                        Add
+                        </md-button>
+                        </div>
+                        <md-card>
+                        <md-table-container>
+                        <table md-table>
                         <thead md-head>
                         <tr md-row>
-                            <th md-column>Group</th>
-                            <th md-column>Code</th>
-                            <th md-column class="no_export"></th>
+                        <th md-column>Group</th>
+                        <th md-column>Code</th>
                         </tr>
                         </thead>
                         <tbody md-body>
                         <tr md-row md-select md-auto-select ng-repeat="tag in tags">
-                            <td md-cell>{{tag.group_name}}</td>
-                            <td md-cell>{{tag.code}}</td>
+                        <td md-cell>{{tag.group_name}}</td>
+                        <td md-cell>{{tag.code}}</td>
                         </tr>
                         </tbody>
-                    </table>
-                </md-table-container>
-            </md-card>
+                        </table>
+                        </md-table-container>
+                        </md-card>
+                    </md-content>
+                </md-tab>
+                <md-tab label="faculty">
+                    <br class="md-padding">
+
+                        <md-subheader class="md-no-sticky">
+                        <span flex></span>
+                            <md-button class="md-primary md-raised" ng-click="addPresent()" style="float: right;">
+                                Add
+                            </md-button>
+                        </md-subheader>
+                    </br>
+                       <div layout="row" layout-wrap layout-margin>
+                           <md-card ng-repeat="present in presents" ng-if="!!present.present">
+                               <md-card-content>
+                                   <p class="md-title"> {{ present.present.toUpperCase() }} </p>
+                               </md-card-content>
+                           </md-card>
+                       </div>
+
+                    </md-content>
+                </md-tab>
+            </md-tabs>
+
+
+
         </div>
     </div>
 
-    <md-button class="md-fab md-primary" style="position: fixed;bottom: 0;right:0;margin: 10px;" ng-click="addtag()">
-        <md-icon class="material-icon">add</md-icon>
-        <md-tooltip md-direction="left">Add Minute</md-tooltip>
-    </md-button>
 </div>

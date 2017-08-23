@@ -28,14 +28,26 @@
                 fetchMinutes: function (data) {
                     return $http.post('/minutes/index', data);
                 },
+                fetchPresent: function (data) {
+                    return $http.post('/present/index', data);
+                },
                 fetchCategory: function (data) {
                     return $http.post('/tags/index', data);
+                },
+                fetchUploadFile: function (data) {
+                return $http.post('/uploadFetch/index', data);
                 },
                 doEdit: function (data) {
                     return $http.post('/minute/edit', data);
                 },
                 doTag: function (data) {
                     return $http.post('/tag/add', data);
+                },
+                doPresent: function (data) {
+                    return $http.post('/present/add', data);
+                },
+                doUpload: function (data) {
+                    return $http.post('/upload/add', data);
                 },
                 isVerified: function(user_email, user_role) {
                     var verificationObj = {

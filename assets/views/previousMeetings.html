@@ -4,6 +4,17 @@
     <div layout="row" flex layout-fill layout-wrap layout-align="start start" layout-padding ng-cloak style="width: 100vw;">
         <div class="example-container mat-elevation-z8" style="width: 100vw;">
             <md-subheader class="md-primary">Previus Meetings</md-subheader>
+            <div layout="row" layout-align="end center">
+                <span>Filter by Tag: </span>
+                <md-input-container>
+                    <md-select ng-model="search.tag.code">
+                        <md-option><em>All</em></md-option>
+                        <md-option ng-repeat="tag in tags" ng-value="tag.code">
+                            {{tag.code}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
 
             <!--<md-table #table [dataSource]="dataSource">-->
 
@@ -51,7 +62,7 @@
                     </thead>
                     <tbody md-body>
 
-                    <tr md-row md-select md-auto-select ng-repeat="meetings in meetings">
+                    <tr md-row md-select md-auto-select ng-repeat="meetings in meetings | filter:search.tag.code">
                         <td md-cell>{{meetings.created_at | date}}</td>
                         <td md-cell>{{meetings.meeting_name}}</td>
                         <td md-cell>{{meetings.name}}</td>

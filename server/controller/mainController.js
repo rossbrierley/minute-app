@@ -7,8 +7,9 @@ const express =require('express');
 var random = require('randomstring');
 const app =express();
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/minutesapp";
+//var url = "mongodb://localhost:27017/minutesapp";
 //var url ="mongodb://wcbcfilemanager:amrita123A@ds155587.mlab.com:55587/minutesapp";
+var url="mongodb://heroku_z1bbr24v:n0qag9scnj80s7d5su2bgqejtf@ds153113.mlab.com:53113/heroku_z1bbr24v";
 var assert= require('assert');
 var html;
 exports.upload = (req,res,err)=>{
@@ -29,8 +30,8 @@ const Folder = './uploads/';
 exports.showFile=(req,res,err)=>{
     var filename= req.body.filename;
     console.log(filename);
-//mammoth.convertToHtml({path: "server/uploads/"+filename})
-   mammoth.convertToHtml({path: "./uploads/"+filename})
+mammoth.convertToHtml({path: "server/uploads/"+filename})
+//   mammoth.convertToHtml({path: "./uploads/"+filename})
         .then(function(result){
             html = result.value; // The generated HTML
             res.send({"data":html,"filename":filename});
@@ -63,6 +64,54 @@ exports.category=(req,res,err)=>{
     });
 
 };
+exports.present=(req,res,err)=>{
+    var present=req.body.presentName;
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var myobj = {present: present};
+        db.collection("present").insertOne(myobj, function (err, result) {
+            if (err) throw err;
+            console.log(result)
+            console.log("present added successfully");
+            if (err) {
+                res.statusCode = 500;
+                res.statusText = "Internal Server Error";
+                return;
+            }
+            res.statusCode = 200;
+            res.statusText = "ok";
+            res.send({msg: "present successfully added", success: true, statusCode: 200});
+            return;
+        });
+    });
+
+};
+exports.uploads=(req,res,err)=>{
+    var created_at_file=req.body.created_at;
+    var created_by_file=req.body.created_by;
+    var meeting_name_file=req.body.meeting_name;
+    var category_file=req.body.category;
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var myobj = {created_at: created_at_file, created_by: created_by_file, meeting_name:meeting_name_file, file_category:category_file};
+        db.collection("uploads").insertOne(myobj, function (err, result) {
+            if (err) throw err;
+            console.log(result)
+            console.log("file data added successfully");
+            if (err) {
+                res.statusCode = 500;
+                res.statusText = "Internal Server Error";
+                return;
+            }
+            res.statusCode = 200;
+            res.statusText = "ok";
+            res.send({msg: "file data successfully added", success: true, statusCode: 200});
+            return;
+        });
+    });
+
+};
+
 
 
 exports.editFile =(req,res,err)=>{
@@ -70,8 +119,8 @@ exports.editFile =(req,res,err)=>{
     var docx = officeClippy.docx;
     var exporter = officeClippy.exporter;
     var doc = docx.create();
-//var output = fs.createWriteStream('server/uploads/'+data.filename);
-   var output = fs.createWriteStream('./uploads/'+data.filename);
+var output = fs.createWriteStream('server/uploads/'+data.filename);
+//   var output = fs.createWriteStream('./uploads/'+data.filename);
     var paragraph = docx.createParagraph(data.data);
     doc.addParagraph(paragraph);
     exporter.local(output, doc);
@@ -245,7 +294,7 @@ exports.fetchCategory = (req,res,err) => {
     console.log("Inside this function");
     var email = req.body.email;
     var authToken = req.body.auth_token;
-    authenticateUser("category", email, authToken, function (response) {
+    authenticateUser("users", email, authToken, function (response) {
         console.log("inside if");
         MongoClient.connect(url,function (err, db) {
             if(err){
@@ -273,6 +322,69 @@ exports.fetchCategory = (req,res,err) => {
     });
 };
 
+exports.fetchUploadFile = (req,res,err) => {
+    console.log("Inside this function");
+    var email = req.body.email;
+    var authToken = req.body.auth_token;
+    authenticateUser("users", email, authToken, function (response) {
+        console.log("inside if");
+        MongoClient.connect(url,function (err, db) {
+            if(err){
+                res.statusCode = 500;
+                res.statusText = "Internal Server Error";
+                return;
+            }
+            db.collection("uploads").find({}).toArray(function (err,result) {
+                if(err){
+                    res.statusText = "Internal Server Error";
+                    res.statusCode  = 500;
+                    return;
+                }
+                res.statusCode = 200;
+                res.statusText = "Ok";
+                res.send({msg: "", success: true, data: result});
+                return;
+            });
+            db.close();
+        });
+    }, function (error) {
+        res.statusText = "Authentication Error";
+        res.statusCode = 401;
+        return;
+    });
+};
+
+exports.fetchPresent = (req,res,err) => {
+    console.log("Inside this function");
+    var email = req.body.email;
+    var authToken = req.body.auth_token;
+    authenticateUser("users", email, authToken, function (response) {
+        console.log("inside if");
+        MongoClient.connect(url,function (err, db) {
+            if(err){
+                res.statusCode = 500;
+                res.statusText = "Internal Server Error";
+                return;
+            }
+            db.collection("present").find({}).toArray(function (err,result) {
+                if(err){
+                    res.statusText = "Internal Server Error";
+                    res.statusCode  = 500;
+                    return;
+                }
+                res.statusCode = 200;
+                res.statusText = "Ok";
+                res.send({msg: "", success: true, data: result});
+                return;
+            });
+            db.close();
+        });
+    }, function (error) {
+        res.statusText = "Authentication Error";
+        res.statusCode = 401;
+        return;
+    });
+};
 exports.fetchMinutes = (req,res,err) => {
     console.log("Inside this function");
     var email = req.body.email;

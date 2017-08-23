@@ -1,0 +1,20 @@
+<md-dialog aria-label="Edit Dialog" style="width: 500px;">
+    <md-dialog-content>
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <h2 flex md-truncate>Add present</h2>
+            </div>
+        </md-toolbar>
+        <form layout-padding>
+            <div layout="row">
+                <md-input-container class="md-block" flex>
+                    <label>present</label>
+                    <textarea ng-model="present.presentName" md-select-on-focus></textarea>
+                </md-input-container>
+            </div>
+            <div layout="row" layout-align="end center">
+                <md-button ng-click="submit(present)">Submit</md-button>
+            </div>
+        </form>
+    </md-dialog-content>
+</md-dialog>

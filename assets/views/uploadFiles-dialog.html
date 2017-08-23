@@ -1,0 +1,56 @@
+<md-dialog aria-label="Edit Dialog" style="width: 500px;">
+    <md-dialog-content>
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <h2 flex md-truncate>Upload Files</h2>
+            </div>
+        </md-toolbar>
+        <form layout-padding>
+            <div layout="row">
+                <md-input-container class="md-block" flex>
+                    <label>Created At</label>
+                    <md-datepicker ng-model="file.created_at" md-placeholder="Created At"></md-datepicker>
+                </md-input-container>
+            </div>
+            <div layout="row">
+                <md-input-container class="md-block" flex>
+                    <label>Created By</label>
+                    <input ng-model="file.created_by" md-select-on-focus>
+                </md-input-container>
+            </div>
+            <div layout="row">
+                <md-input-container class="md-block" flex>
+                    <label>Meeting Name</label>
+                    <input ng-model="file.meeting_name" md-select-on-focus>
+                </md-input-container>
+            </div>
+            <div layout="row">
+               <md-autocomplete flex
+                                md-selected-item="file.category"
+                                 md-search-text="searchText"
+                                 md-selected-item-change="selectedItemChange(item)"
+                                 md-items="item in tags | filter:searchText"
+                                 md-item-text="item.code"
+                                 md-min-length="2"
+                                 placeholder="enter an tag name"
+                                 md-floating-label="Tag">
+                    <md-item-template>
+                        <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.group_name}} - {{item.code}}</span>
+                    </md-item-template>
+                    <md-not-found>
+                        No tag/category matching "{{searchText}}" was found.
+                    </md-not-found>
+                </md-autocomplete>
+
+            </div>
+            <md-button style="padding: 0px;margin: 0px;" aria-label="file upload" ngf-select="upload($files)">
+                <md-card style="width: 300px;margin: 0px;" md-whiteframe="8">
+                    click here and Upload your file
+                </md-card>
+            </md-button>
+            <div layout="row" layout-align="end center">
+                <md-button ng-click="submit(file)">Submit</md-button>
+            </div>
+        </form>
+    </md-dialog-content>
+</md-dialog>

@@ -12,6 +12,7 @@
                         sessionStorage.authToken = response.data.data[0].auth_token;
                         sessionStorage.name = response.data.data[0].name;
                         sessionStorage.isLoggedIn = true;
+
                         //console.log(response);
                     }
                     else{

@@ -10,21 +10,28 @@
                 };
                 console.log(sessionStorage);
 
-            $scope.hideIt = true;
+            dataServices.fetchCategory(data).then(function (response) {
+                console.log(response);
+                $rootScope.tags = response.data.data;
+            });
+
+           /* var doc = new jsPDF();
+            var specialElementHandlers = {
+                '#hide': function (element, renderer) {
+                    return true;
+                }
+            };
             $scope.downloadPDF = function () {
-                var doc = new jsPDF();
-                var specialElementHandlers = {
-                    '#hide': function (element, renderer) {
-                        return true;
-                    }
-                };
-                doc.fromHTML(document.getElementById('pdf'), 15, 15, {
+
+                var source = document.getElementById('pdf');
+
+                doc.fromHTML(source , 15, 15, {
                     'width': 170,
                     'elementHandlers': specialElementHandlers
                 });
                 doc.save('minute.pdf');
 
-            }
+            } */
               dataServices.fetchMinutes(data).then(function (response) {
 
                   console.log(response.data.msg);

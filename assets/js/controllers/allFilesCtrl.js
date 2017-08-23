@@ -1,10 +1,10 @@
 (function(){
 	angular.module('fileManager')
-		   .controller('allFilesCtrl',['$scope', '$mdDialog', 'dataService','$http', 'dialogService','$rootScope', function($scope, $mdDialog, dataService,$http, dialogService,$rootScope) {
+		   .controller('allFilesCtrl',['$scope', '$mdDialog','dataServices', 'dataService','$http', 'dialogService','$rootScope', function($scope, $mdDialog, dataServices, dataService, $http, dialogService,$rootScope) {
 
 		   	console.log(sessionStorage.isLoggedIn);
 		   	dataService.getFiles()
-				.then(onSuccess)
+				.then(onSuccess);
 
 			function onSuccess(data) {
 				$rootScope.item=[];
@@ -47,10 +47,28 @@
 					"filename": $rootScope.filename,
 					"data":$scope.m
 				}
-				dataService.editFile(editObj).then(function(response){
+				dataServices.editFile(editObj).then(function(response){
 					console.log(response.data);
 				});
 			};
+
+               var data = {
+                   "email" : sessionStorage.email,
+                   "auth_token": sessionStorage.authToken
+               };
+
+               dataServices.fetchUploadFile(data).then(function (response) {
+                   console.log(response);
+                   $rootScope.file_data = response.data.data;
+               });
+
+               dataServices.fetchCategory(data).then(function (response) {
+                   console.log(response);
+                   $rootScope.tags = response.data.data;
+               });
+
+
+
 		}])
 		.directive("contenteditable", function() {
   return {

@@ -12,6 +12,10 @@
                 console.log(response);
                 $rootScope.tags = response.data.data;
             });
+            dataServices.fetchPresent(data).then(function (response) {
+                console.log(response);
+                $rootScope.presents = response.data.data;
+            });
 
             $rootScope.addtag = function (ev) {
                 $mdDialog.show({
@@ -31,6 +35,32 @@
                             code : tag.code
                         }
                         $rootScope.tags.push(lastTag);
+                    }, function (error){
+                        console.log("Error");
+                    });
+                    $mdDialog.hide();
+                };
+            }
+
+
+
+            $rootScope.addPresent = function (ev) {
+                $mdDialog.show({
+                    controller: presentController,
+                    templateUrl: 'views/present-dialog.html',
+                    parent: angular.element(document.body),
+                    targetEvent: ev,
+                    clickOutsideToClose: true
+                });
+            };
+            function presentController($scope,$mdDialog, $rootScope) {
+                $scope.submit = function (present) {
+                    dataServices.doPresent(present).then(function (response) {
+                        var presentLast = {
+                            present : present.presentName
+                        };
+                        $rootScope.presents.push(presentLast);
+
                     }, function (error){
                         console.log("Error");
                     });

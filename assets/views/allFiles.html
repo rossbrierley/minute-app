@@ -2,18 +2,73 @@
 	<div ng-include="'views/sidenav.html'" layout="column" style="height: calc(100vh - 64px);"></div>
 
 	<div layout="row"  layout-wrap layout-align="start start" layout-padding ng-cloak style="width: 100vw;">
-
 		<div ng-repeat="item in items" class="fx-fade-up fx-speed-{{500 + $index * 200}} fx-easing-back">
+
+
 			<md-card md-whiteframe="4" ng-click="openDocument($index)" style="width: 125px;">
 				<md-card-title>
 					<md-card-title-media style="margin: 0 auto;">
 						<img src="https://amitasaurus.github.io/documentReader/word.png">
 					</md-card-title-media>
 				</md-card-title>
-				<md-card-content>
-					<span flex md-truncate style="text-align: center;">{{item}}</span>
+				<md-card-content style="text-align: center;overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+width: 75px;">
+					<span >{{item}}</span>
 				</md-card-content>
 			</md-card>
+
+
 		</div>
+		<div layout="row" layout-align="end center">
+			<span>Filter by Tag: </span>
+			<md-input-container>
+				<md-select ng-model="search.file_category">
+					<md-option><em>All</em></md-option>
+					<md-option ng-repeat="tag in tags" ng-value="tag.code">
+						{{tag.code}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+			<div layout-fill>
+		<md-card>
+			<md-table-container>
+				<table md-table >
+					<thead md-head>
+					<tr md-row>
+						<th md-column>Created At</th>
+						<th md-column>Created By</th>
+						<th md-column>File Category</th>
+						<th md-column>Meeting Name</th>
+						<th md-column></th>
+					</tr>
+					</thead>
+					<tbody md-body>
+
+					<tr md-row md-select md-auto-select ng-repeat="data in file_data | filter: search.file_category">
+						<td md-cell>{{data.created_at | date}}</td>
+						<td md-cell>{{data.created_by}}</td>
+						<td md-cell>{{data.file_category.code}}</td>
+						<td md-cell>{{data.meeting_name}}</td>
+						<td md-cell style="text-align: right;">
+							<md-button class="md-icon-button" aria-label="View" ng-click="view(meetings)">
+								<md-icon class="material-icon">remove_red_eye</md-icon>
+								<md-tooltip md-direction="left">View Minute</md-tooltip>
+							</md-button>
+
+						</td>
+					</tr>
+
+					</tbody>
+				</table>
+			</md-table-container>
+		</md-card>
+			</div>
+
+
+
+
 	</div>
 </div>
