@@ -35,7 +35,7 @@
                     return $http.post('/tags/index', data);
                 },
                 fetchUploadFile: function (data) {
-                return $http.post('/uploadFetch/index', data);
+                    return $http.post('/uploadFetch/index', data);
                 },
                 doEdit: function (data) {
                     return $http.post('/minute/edit', data);

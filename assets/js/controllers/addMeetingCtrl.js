@@ -19,21 +19,21 @@
                 $rootScope.presents = response.data.data;
             });
 
-             var faculties = [];
-             function makeString(array) {
-                 var list = ''
-                 for(var i = 0; i < array.length; i++){
+            var faculties = [];
+            function makeString(array) {
+                var list = ''
+                for(var i = 0; i < array.length; i++){
 
-                     var list = array[i] + ' , ' +  list ;
-                 }
-                 return list;
-             }
+                    var list = array[i] + ' , ' +  list ;
+                }
+                return list;
+            }
             $scope.thisFaculty = '';
             $scope.addFaculty = function (faculty) {
                 if(faculty !== undefined){
-                     faculties.push(faculty);
-                     $scope.newMeeting.presents = makeString(faculties);
-                     $scope.thisFaculty = '';
+                    faculties.push(faculty);
+                    $scope.newMeeting.presents = makeString(faculties);
+                    $scope.thisFaculty = '';
                 }
 
             }

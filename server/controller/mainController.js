@@ -17,8 +17,10 @@ exports.upload = (req,res,err)=>{
 }
 exports.allFiles=(req,res,err)=>{
     var filename=[];
-//const Folder = 'server/uploads/';
-const Folder = './uploads/';
+
+const Folder = 'server/uploads/';
+//const Folder = './uploads/';
+
     fs.readdir(Folder, (err, files) => {
         files.forEach(file => {
         filename.push(file);
@@ -64,6 +66,7 @@ exports.category=(req,res,err)=>{
     });
 
 };
+
 exports.present=(req,res,err)=>{
     var present=req.body.presentName;
     MongoClient.connect(url, function(err, db) {
@@ -119,8 +122,10 @@ exports.editFile =(req,res,err)=>{
     var docx = officeClippy.docx;
     var exporter = officeClippy.exporter;
     var doc = docx.create();
+
 var output = fs.createWriteStream('server/uploads/'+data.filename);
 //   var output = fs.createWriteStream('./uploads/'+data.filename);
+
     var paragraph = docx.createParagraph(data.data);
     doc.addParagraph(paragraph);
     exporter.local(output, doc);
@@ -295,6 +300,7 @@ exports.fetchCategory = (req,res,err) => {
     var email = req.body.email;
     var authToken = req.body.auth_token;
     authenticateUser("users", email, authToken, function (response) {
+
         console.log("inside if");
         MongoClient.connect(url,function (err, db) {
             if(err){

@@ -34,12 +34,14 @@ var upload = multer({ storage: storage });
 app.post('/login/user',jsonParser, mainController.login);
 app.post('/signup/newUser',jsonParser, mainController.signup);
 app.post('/tag/add',jsonParser, mainController.category);
+
 app.post('/present/add',jsonParser, mainController.present);
 app.post('/upload/add',jsonParser, mainController.uploads);
 app.post('/addMeetings/newMeeting',jsonParser, mainController.newMeeting);
 app.post('/minutes/index', jsonParser, mainController.fetchMinutes);
 app.post('/uploadFetch/index', jsonParser, mainController.fetchUploadFile);
 app.post('/present/index', jsonParser, mainController.fetchPresent);
+
 app.post('/tags/index', jsonParser, mainController.fetchCategory);
 app.post('/upload', upload.single('file'),mainController.upload);
 app.post('/allfiles',mainController.allFiles);

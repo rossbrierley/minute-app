@@ -2,46 +2,46 @@
     angular.module('fileManager')
         .controller('previousMinuteController', ['$scope', '$rootScope', 'dataServices', '$http',  '$state','$mdDialog', function($scope, $rootScope, dataServices, $http, $state,$mdDialog) {
             console.log('previousMinuteController');
-           $rootScope.meetings = [];
+            $rootScope.meetings = [];
 
-                var data = {
-                    "email" : sessionStorage.email,
-                    "auth_token": sessionStorage.authToken
-                };
-                console.log(sessionStorage);
+            var data = {
+                "email" : sessionStorage.email,
+                "auth_token": sessionStorage.authToken
+            };
+            console.log(sessionStorage);
 
             dataServices.fetchCategory(data).then(function (response) {
                 console.log(response);
                 $rootScope.tags = response.data.data;
             });
 
-           /* var doc = new jsPDF();
-            var specialElementHandlers = {
-                '#hide': function (element, renderer) {
-                    return true;
+            /* var doc = new jsPDF();
+             var specialElementHandlers = {
+             '#hide': function (element, renderer) {
+             return true;
+             }
+             };
+             $scope.downloadPDF = function () {
+
+             var source = document.getElementById('pdf');
+
+             doc.fromHTML(source , 15, 15, {
+             'width': 170,
+             'elementHandlers': specialElementHandlers
+             });
+             doc.save('minute.pdf');
+
+             } */
+            dataServices.fetchMinutes(data).then(function (response) {
+
+                console.log(response.data.msg);
+                $rootScope.meeting = response.data.data;
+                for(var i = 0; i<$rootScope.meeting.length; i++)
+                {
+                    $rootScope.meetings.push($rootScope.meeting[i]);
                 }
-            };
-            $scope.downloadPDF = function () {
-
-                var source = document.getElementById('pdf');
-
-                doc.fromHTML(source , 15, 15, {
-                    'width': 170,
-                    'elementHandlers': specialElementHandlers
-                });
-                doc.save('minute.pdf');
-
-            } */
-              dataServices.fetchMinutes(data).then(function (response) {
-
-                  console.log(response.data.msg);
-                  $rootScope.meeting = response.data.data;
-                  for(var i = 0; i<$rootScope.meeting.length; i++)
-                  {
-                      $rootScope.meetings.push($rootScope.meeting[i]);
-                  }
-                  console.log($rootScope.meetings);
-              });
+                console.log($rootScope.meetings);
+            });
             $rootScope.view = function (meeting) {
 
                 console.log(meeting);
@@ -63,7 +63,7 @@
             function addController($scope,$mdDialog, $rootScope) {
                 console.log($rootScope.index);
                 $scope.submit = function () {
-                   console.log($rootScope.meetings);
+                    console.log($rootScope.meetings);
                     var newMeet = {};
                     newMeet._id =$rootScope.thisMeet._id;
                     newMeet.meetingName =$rootScope.thisMeet.meeting_name;
