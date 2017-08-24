@@ -15,7 +15,7 @@
                 $rootScope.tags = response.data.data;
             });
 
-            /* var doc = new jsPDF();
+             var doc = new jsPDF();
              var specialElementHandlers = {
              '#hide': function (element, renderer) {
              return true;
@@ -30,8 +30,7 @@
              'elementHandlers': specialElementHandlers
              });
              doc.save('minute.pdf');
-
-             } */
+             }
             dataServices.fetchMinutes(data).then(function (response) {
 
                 console.log(response.data.msg);

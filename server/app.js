@@ -19,8 +19,8 @@ var jsonParser = bodyParser.json()
 app.use(cors());
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-  cb(null, 'server/uploads/')
-  // cb(null, './uploads/');
+ // cb(null, 'server/uploads/')
+   cb(null, './uploads/');
   },
   filename: function (req, file, cb) {
     crypto.pseudoRandomBytes(16, function (err, raw) {

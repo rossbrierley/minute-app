@@ -50,7 +50,7 @@
                            $mdDialog.hide();
                        };
 
-                   $scope.upload = function (file) {
+                 /*  $scope.upload = function (file) {
                        console.log(file);
                        Upload.upload({
                            url: '/upload/add',
@@ -66,7 +66,7 @@
                            var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
                            console.log('progress: ' + progressPercentage + '% ');
                        });
-                   };
+                   }; */
                    }
 
 
