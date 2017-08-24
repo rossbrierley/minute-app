@@ -5,6 +5,7 @@ const mammoth = require("mammoth");
 var officeClippy = require('office-clippy');
 const express =require('express');
 var random = require('randomstring');
+
 const app =express();
 var MongoClient = require('mongodb').MongoClient;
 //var url = "mongodb://localhost:27017/minutesapp";
@@ -33,7 +34,7 @@ exports.showFile=(req,res,err)=>{
     var filename= req.body.filename;
     console.log(filename);
 mammoth.convertToHtml({path: "server/uploads/"+filename})
-//   mammoth.convertToHtml({path: "./uploads/"+filename})
+//  mammoth.convertToHtml({path: "./uploads/"+filename})
         .then(function(result){
             html = result.value; // The generated HTML
             res.send({"data":html,"filename":filename});
@@ -90,26 +91,40 @@ exports.present=(req,res,err)=>{
 
 };
 exports.uploads=(req,res,err)=>{
-    var created_at_file=req.body.created_at;
-    var created_by_file=req.body.created_by;
-    var meeting_name_file=req.body.meeting_name;
-    var category_file=req.body.category;
+    var created_at_file=req.body.datas.created_at;
+    var created_by_file=req.body.datas.created_by;
+    var meeting_name_file=req.body.datas.meeting_name;
+    var category_file=req.body.datas.category;
+    var filename_file= req.file.filename;
+   console.log("hello you"+req.file.filename)
+    console.log(req.body.datas.created_by);
+   // console.log(req.body);
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        var myobj = {created_at: created_at_file, created_by: created_by_file, meeting_name:meeting_name_file, file_category:category_file};
-        db.collection("uploads").insertOne(myobj, function (err, result) {
-            if (err) throw err;
-            console.log(result)
-            console.log("file data added successfully");
-            if (err) {
-                res.statusCode = 500;
-                res.statusText = "Internal Server Error";
+
+        var myobj = {created_at: created_at_file, created_by: created_by_file, meeting_name:meeting_name_file, file_category:category_file, file_name: filename_file};
+        var findFile = {file_name: filename_file}
+        db.collection("uploads").find(findFile).toArray(function (err,result) {
+            if (result.length > 0) {
+                res.statusCode = 200;
+                res.send({msg: "file with this name already exists! please rename your file and upload", success: false, statusCode: 200});
                 return;
             }
-            res.statusCode = 200;
-            res.statusText = "ok";
-            res.send({msg: "file data successfully added", success: true, statusCode: 200});
-            return;
+            else {
+                db.collection("uploads").insertOne(myobj, function (err, result) {
+                    if (err) throw err
+                    console.log("file data added successfully");
+                    if (err) {
+                        res.statusCode = 500;
+                        res.statusText = "Internal Server Error";
+                        return;
+                    }
+                    res.statusCode = 200;
+                    res.statusText = "ok";
+                    res.send({msg: "file data successfully added", success: true, statusCode: 200});
+                    return;
+                });
+            }
         });
     });
 

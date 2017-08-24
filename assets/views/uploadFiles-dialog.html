@@ -9,24 +9,24 @@
             <div layout="row">
                 <md-input-container class="md-block" flex>
                     <label>Created At</label>
-                    <md-datepicker ng-model="file.created_at" md-placeholder="Created At"></md-datepicker>
+                    <md-datepicker ng-model="datas.created_at" md-placeholder="Created At"></md-datepicker>
                 </md-input-container>
             </div>
             <div layout="row">
                 <md-input-container class="md-block" flex>
                     <label>Created By</label>
-                    <input ng-model="file.created_by" md-select-on-focus>
+                    <input ng-model="datas.created_by" md-select-on-focus>
                 </md-input-container>
             </div>
             <div layout="row">
                 <md-input-container class="md-block" flex>
                     <label>Meeting Name</label>
-                    <input ng-model="file.meeting_name" md-select-on-focus>
+                    <input ng-model="datas.meeting_name" md-select-on-focus>
                 </md-input-container>
             </div>
             <div layout="row">
                <md-autocomplete flex
-                                md-selected-item="file.category"
+                                md-selected-item="datas.category"
                                  md-search-text="searchText"
                                  md-selected-item-change="selectedItemChange(item)"
                                  md-items="item in tags | filter:searchText"
@@ -43,13 +43,13 @@
                 </md-autocomplete>
 
             </div>
-            <md-button style="padding: 0px;margin: 0px;" aria-label="file upload" ngf-select="upload($files)">
+            <md-button style="padding: 0px;margin: 0px;" aria-label="file upload">
                 <md-card style="width: 300px;margin: 0px;" md-whiteframe="8">
                     click here and Upload your file
                 </md-card>
             </md-button>
             <div layout="row" layout-align="end center">
-                <md-button ng-click="submit(file)">Submit</md-button>
+                <md-button ngf-select="submit($file, datas)">Submit</md-button>
             </div>
         </form>
     </md-dialog-content>

@@ -25,21 +25,35 @@
                };
                function addController($scope,$mdDialog, $rootScope) {
                    $scope.tags = $rootScope.tags;
-                   $scope.file = {};
+                   $scope.datas = {};
 
-                       $scope.submit = function (file) {
+                       $scope.submit = function (file, datas) {
+                           Upload.upload({
+                               url: '/upload/add',
+                               arrayKey: '',
+                               data: {file: file, datas: datas},
 
-                           dataServices.doUpload(file).then(function (response) {
+
+                           }).then(function (resp) {
+                               console.log('Success ' + resp.data + 'uploaded. Response: ' + resp.fal);
+                           }, function (resp) {
+                               console.log('Error status: ' + resp.status);
+                           }, function (evt) {
+                               var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+                               console.log('progress: ' + progressPercentage + '% ');
+                           });
+                        /*   dataServices.doUpload(file).then(function (response) {
                            }, function (error) {
                                console.log("Error");
-                           });
+                           }); */
+
                            $mdDialog.hide();
                        };
 
                    $scope.upload = function (file) {
                        console.log(file);
                        Upload.upload({
-                           url: '/upload',
+                           url: '/upload/add',
                            arrayKey: '',
                            data: {file: file},
 

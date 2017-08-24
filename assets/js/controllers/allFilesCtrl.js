@@ -23,7 +23,7 @@
 				$mdDialog.show({
 					controller: function($scope, $mdDialog, dataService, dialogService) {
 						$scope.cancel = function() {
-							$mdDialog.cancel();	
+							$mdDialog.cancel();
 						};
 						$scope.current = dialogService.currentlyReading;
 						
@@ -66,8 +66,6 @@
                    console.log(response);
                    $rootScope.tags = response.data.data;
                });
-
-
 
 		}])
 		.directive("contenteditable", function() {
