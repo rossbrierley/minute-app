@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c9959d6-e92b-40cd-850e-e0acf44a8870" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/controllers/previousMinuteController.js" afterPath="$PROJECT_DIR$/assets/js/controllers/previousMinuteController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/controllers/uploadCtrl.js" afterPath="$PROJECT_DIR$/assets/js/controllers/uploadCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/views/allFiles.html" afterPath="$PROJECT_DIR$/assets/views/allFiles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/views/uploadFiles-dialog.html" afterPath="$PROJECT_DIR$/assets/views/uploadFiles-dialog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/views/viewMinute.html" afterPath="$PROJECT_DIR$/assets/views/viewMinute.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app.js" afterPath="$PROJECT_DIR$/server/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/controller/mainController.js" afterPath="$PROJECT_DIR$/server/controller/mainController.js" />
     </list>
@@ -20,6 +15,26 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/controller/mainController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="36" column="2" lean-forward="false" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="viewMinuteController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/controllers/viewMinuteController.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -52,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uploadFiles-dialog.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="uploadFiles-dialog.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/views/uploadFiles-dialog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+            <state relative-caret-position="269">
+              <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -139,13 +154,13 @@
         <option value="$PROJECT_DIR$/assets/js/controllers/allFilesCtrl.js" />
         <option value="$PROJECT_DIR$/assets/js/controllers/viewMinuteController.js" />
         <option value="$PROJECT_DIR$/assets/js/controllers/addMeetingCtrl.js" />
-        <option value="$PROJECT_DIR$/server/app.js" />
-        <option value="$PROJECT_DIR$/server/controller/mainController.js" />
         <option value="$PROJECT_DIR$/assets/views/allFiles.html" />
         <option value="$PROJECT_DIR$/assets/js/controllers/previousMinuteController.js" />
         <option value="$PROJECT_DIR$/assets/views/viewMinute.html" />
         <option value="$PROJECT_DIR$/assets/js/controllers/uploadCtrl.js" />
         <option value="$PROJECT_DIR$/assets/views/uploadFiles-dialog.html" />
+        <option value="$PROJECT_DIR$/server/app.js" />
+        <option value="$PROJECT_DIR$/server/controller/mainController.js" />
       </list>
     </option>
   </component>
@@ -470,12 +485,12 @@
       <workItem from="1503342331644" duration="864000" />
       <workItem from="1503384320841" duration="31501000" />
       <workItem from="1503472476479" duration="28240000" />
-      <workItem from="1503552838929" duration="14922000" />
+      <workItem from="1503552838929" duration="15128000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193847000" />
+    <option name="totallyTimeSpent" value="194053000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1202,22 +1217,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controller/mainController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/services/dataservices.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
@@ -1286,8 +1285,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/views/uploadFiles-dialog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+        <state relative-caret-position="269">
+          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/mainController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="36" column="2" lean-forward="false" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
           <folding />
         </state>
       </provider>

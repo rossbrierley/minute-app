@@ -8,9 +8,9 @@ var random = require('randomstring');
 
 const app =express();
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/minutesapp";
+//var url = "mongodb://localhost:27017/minutesapp";
 //var url ="mongodb://wcbcfilemanager:amrita123A@ds155587.mlab.com:55587/minutesapp";
-//var url="mongodb://heroku_z1bbr24v:n0qag9scnj80s7d5su2bgqejtf@ds153113.mlab.com:53113/heroku_z1bbr24v";
+var url="mongodb://heroku_z1bbr24v:n0qag9scnj80s7d5su2bgqejtf@ds153113.mlab.com:53113/heroku_z1bbr24v";
 var assert= require('assert');
 var html;
 exports.upload = (req,res,err)=>{
@@ -19,8 +19,8 @@ exports.upload = (req,res,err)=>{
 exports.allFiles=(req,res,err)=>{
     var filename=[];
 
-//const Folder = 'server/uploads/';
-const Folder = './uploads/';
+const Folder = 'server/uploads/';
+//const Folder = './uploads/';
 
     fs.readdir(Folder, (err, files) => {
         files.forEach(file => {
@@ -33,8 +33,8 @@ const Folder = './uploads/';
 exports.showFile=(req,res,err)=>{
     var filename= req.body.filename;
     console.log(filename);
-//mammoth.convertToHtml({path: "server/uploads/"+filename})
-  mammoth.convertToHtml({path: "./uploads/"+filename})
+mammoth.convertToHtml({path: "server/uploads/"+filename})
+//  mammoth.convertToHtml({path: "./uploads/"+filename})
         .then(function(result){
             html = result.value; // The generated HTML
             res.send({"data":html,"filename":filename});
