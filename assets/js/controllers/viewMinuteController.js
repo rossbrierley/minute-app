@@ -2,6 +2,7 @@
     angular.module('fileManager')
         .controller('viewMinuteCtrl', ['$scope', '$rootScope', 'dataServices', '$http',  '$state','$mdDialog', function($scope, $rootScope, dataServices, $http, $state, $mdDialog) {
             console.log('viewMinuteController');
+
             $scope.edit = function(ev) {
                 $mdDialog.show({
                     controller: editController,

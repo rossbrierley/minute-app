@@ -1,6 +1,6 @@
 (function() {
     angular.module('fileManager')
-        .controller('addMeetingCtrl', ['$scope', '$rootScope', 'dataServices', '$http',  '$state', function($scope, $rootScope, dataServices, $http, $state) {
+        .controller('addMeetingCtrl', ['$scope', '$rootScope', 'dataServices', '$http',  '$state', '$mdToast','$cookies', function($scope, $rootScope, dataServices, $http, $state, $mdToast, $cookies) {
             $scope.newMeeting = {};
             $scope.newMeeting.email = sessionStorage.email;
             $scope.newMeeting.name = sessionStorage.name;
@@ -40,15 +40,22 @@
 
             $scope.sendMeet = function(newMeeting) {
                 var newMeet = newMeeting;
+                newMeet.codeID = newMeeting.tag.code;
                 console.log(newMeet);
                 dataServices.doMeeting(newMeet).then(function (response) {
                     if(response.data.success === true) {
-                        console.log("signup is success");
-                        $state.go('previousMeetings');
                         $mdToast.showSimple(response.data.msg);
+                        var data = response.data.data;
+                        $rootScope.count = response.data.data.count;
+                        var tag = response.data.data.tag;
+                        $cookies.putObject('tag',tag);
+                        console.log($cookies.getObject('tag'));
+                        sessionStorage.count = response.data.data.count;
+                        console.log(sessionStorage.count);
+                        $rootScope.view(data);
+
                     }
-                    else {
-                        console.log("signup not success");
+                    else{
                         $mdToast.showSimple(response.data.msg);
                     }
                     console.log(response);
@@ -57,6 +64,13 @@
                 }, function (error){
                     console.log("Error");
                 });
+            };
+            $rootScope.view = function (meeting) {
+
+                console.log(meeting);
+                $rootScope.thisMeet  = meeting;
+                $state.go('viewMinute');
+
             };
         }]);
 })();

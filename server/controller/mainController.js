@@ -94,15 +94,124 @@ exports.uploads=(req,res,err)=>{
     var created_at_file=req.body.datas.created_at;
     var created_by_file=req.body.datas.created_by;
     var meeting_name_file=req.body.datas.meeting_name;
-    var category_file=req.body.datas.category;
+    var email = req.body.datas.email;
+    var authToken = req.body.datas.auth_token;
+    var tag=req.body.datas.category;
     var filename_file= req.file.filename;
+    var codeID = tag.code;
+    var count = 0;
+    var startsWith = parseInt(req.body.datas.start_with,10);
+    var endsWith = parseInt(req.body.datas.ends_with,10);
    console.log("hello you"+req.file.filename)
-    console.log(req.body.datas.created_by);
+    console.log(startsWith);
    // console.log(req.body);
+    var myobjson = {
+        meeting_name: meeting_name_file,
+        presents: created_by_file,
+        tag: tag,
+        email: email,
+        name: filename_file,
+        created_at: new Date(),
+        auth_token: authToken
+    }
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
+        db.collection("meetings").find({"tag.code": tag.code}).toArray(function (err, result) {
 
-        var myobj = {created_at: created_at_file, created_by: created_by_file, meeting_name:meeting_name_file, file_category:category_file, file_name: filename_file};
+            if (err) {
+                res.statusText = "Internal Server Error";
+                res.statusCode = 500;
+                return;
+
+            }
+            if(result.length>0){
+                for(var i=0; i<result.length; i++) {
+                    if(result[i].minutes === undefined)
+                    {
+                        count = count+0;
+                    }
+                    else {
+                        count = count + result[i].minutes.length;
+
+                    }
+                }
+                console.log("the length is: "+count);
+                count = endsWith;
+                console.log("count is" +count);
+                codeID = codeID+ " - 00"+ count;
+                db.collection("meetings").insert(myobjson, function (err, result) {
+                    if (err) {
+                        res.statusCode = 500;
+                        res.statusText = "Internal Server Error";
+                        return;
+                    }
+                });
+                    db.collection("meetings").update(
+                        {
+                            "meeting_name": meeting_name_file,
+                            "email": email
+                        }, {
+                            $push: {
+                                "minutes": {
+                                    "starts_with": startsWith,
+                                    "bullet_points": filename_file,
+                                    "updated_by": created_by_file,
+                                    "tag": tag,
+                                    "codeID": codeID,
+                                    "ends_with": endsWith
+                                }
+                            }
+                        },
+                        function (err, result) {
+                            if (err) {
+                                res.statusCode = 500;
+                                res.statusText = "Internal Server Error";
+                                return;
+                            }
+                        });
+
+                myobjson.count = count;
+            }
+            else {
+                console.log("no data");
+                count = count+endsWith;
+                codeID = codeID+ " - 00"+ count;
+                db.collection("meetings").insert(myobjson, function (err, result) {
+                    if (err) {
+                        res.statusCode = 500;
+                        res.statusText = "Internal Server Error";
+                        return;
+                    }
+                });
+
+                    db.collection("meetings").update(
+                        {
+                            "meeting_name": meeting_name_file,
+                            "email": email
+                        }, {
+                            $push: {
+                                "minutes": {
+                                    "stars_with": startsWith,
+                                    "bullet_points": filename_file,
+                                    "updated_by": created_by_file,
+                                    "tag": tag,
+                                    "codeID":codeID,
+                                    "ends_with": endsWith
+                                }
+                            }
+                        },
+                        function (err, result) {
+                            if (err) {
+                                res.statusCode = 500;
+                                res.statusText = "Internal Server Error";
+                                return;
+                            }
+                        });
+
+
+            }
+        })
+        var myobj = {created_at: created_at_file, created_by: created_by_file, meeting_name:meeting_name_file, tag:tag, file_name: filename_file};
         var findFile = {file_name: filename_file}
         db.collection("uploads").find(findFile).toArray(function (err,result) {
             if (result.length > 0) {
@@ -123,9 +232,13 @@ exports.uploads=(req,res,err)=>{
                     res.statusText = "ok";
                     res.send({msg: "file data successfully added", success: true, statusCode: 200});
                     return;
+
                 });
+                db.close();
             }
+
         });
+
     });
 
 };
@@ -183,6 +296,12 @@ exports.newMeeting = (req,res,err)=>
     var email = req.body.email;
     var name = req.body.name;
     var authToken = req.body.auth_token;
+    var codeID = req.body.codeID;
+    var count = 0;
+    var count1 = 0;
+    var count2 = 0;
+    var count3 = 0;
+    console.log(codeID);
     MongoClient.connect(url, function (err, db) {
         if (err) {
             res.statusCode = 500;
@@ -191,32 +310,101 @@ exports.newMeeting = (req,res,err)=>
         }
         if (objId) {
             console.log("Going here ")
-            db.collection("meetings").update(
-                {
-                    "meeting_name": meetingName,
-                    "email": email
-                }, {
-                    $push: {
-                        "minutes": {
-                            "bullet_points": minute,
-                            "updated_by": name,
-                            "tag": tag
+
+            db.collection("meetings").find({"tag.code": tag.code}).toArray(function (err, result) {
+
+                if (err) {
+                    res.statusText = "Internal Server Error";
+                    res.statusCode = 500;
+                    return;
+
+                }
+                if(result.length>0){
+                    for(var i=0; i<result.length; i++) {
+                        if(result[i].minutes === undefined)
+                        {
+                            console.log("In first");
+                            count1 = count1+0;
+                        }
+                        else if(result[i].minutes && result[i].minutes[0].ends_with === undefined) {
+                            console.log("In second");
+                            count2 = count2 + result[i].minutes.length;
+
+                        }
+                        else if(result[i].minutes && result[i].minutes[0].ends_with){
+                            console.log("In third");
+                            count3 = count3+result[i].minutes[0].ends_with;
                         }
                     }
-                },
-                function (err, result) {
-                    if (err) {
-                        res.statusCode = 500;
-                        res.statusText = "Internal Server Error";
-                        return;
-                    }
-                    res.statusCode = 200;
-                    res.statusText = "ok";
-                    res.send({msg: "successfully added minute", success: true, statusCode: 200});
-                    return;
-                });
+                    console.log("the length is: "+count);
+                    count = count1+count2+count3;
+                    codeID = codeID+ " - 00"+ count;
+                    console.log(codeID);
+                    db.collection("meetings").update(
+                        {
+                            "meeting_name": meetingName,
+                            "email": email
+                        }, {
+                            $push: {
+                                "minutes": {
+                                    "bullet_points": minute,
+                                    "updated_by": name,
+                                    "codeID": codeID
+
+                                }
+
+
+                            }
+                        },
+                        function (err, result) {
+                            if (err) {
+                                res.statusCode = 500;
+                                res.statusText = "Internal Server Error";
+                                return;
+                            }
+                            res.statusCode = 200;
+                            res.statusText = "ok";
+                            res.send({msg: "successfully added minute", success: true, statusCode: 200, count: count});
+                            return;
+                        });
+                }
+                else {
+                    console.log("no data");
+                    codeID = req.body.codeID+ " - 00"+ 1;
+                    console.log("else"+codeID);
+                    db.collection("meetings").update(
+                        {
+                            "meeting_name": meetingName,
+                            "email": email
+                        }, {
+                            $push: {
+                                "minutes": {
+                                    "bullet_points": minute,
+                                    "updated_by": name,
+                                    "codeID": codeID
+
+                                }
+
+
+                            }
+                        },
+                        function (err, result) {
+                            if (err) {
+                                res.statusCode = 500;
+                                res.statusText = "Internal Server Error";
+                                return;
+                            }
+                            res.statusCode = 200;
+                            res.statusText = "ok";
+                            res.send({msg: "successfully added minute", success: true, statusCode: 200, count: count});
+                            return;
+                        });
+                }
+            });
+
+
         }
-        else if(objId === undefined){
+        else if (objId === undefined) {
             console.log("going here 2");
             var meeting = [];
             var myobj = {
@@ -228,49 +416,85 @@ exports.newMeeting = (req,res,err)=>
                 created_at: new Date(),
                 auth_token: authToken
             }
+
+            db.collection("meetings").find({"tag.code": tag.code}).toArray(function (err, result) {
+
+                if (err) {
+                    res.statusText = "Internal Server Error";
+                    res.statusCode = 500;
+                    return;
+
+                }
+                if(result.length>0){
+                    for(var i=0; i<result.length; i++) {
+                        if(result[i].minutes === undefined)
+                        {
+                            count1 = count1+0;
+                        }
+                        else if(result[i].minutes && result[i].minutes[0].ends_with === undefined) {
+                            count2 = count2 + result[i].minutes.length;
+
+                        }
+                        else if(result[i].minutes && result[i].minutes[0].ends_with){
+                            count3 = count3+result[i].minutes[0].ends_with;
+                        }
+                    }
+                    console.log("the length is: "+count);
+                    count = count1+count2+count3;
+                }
+                else {
+                    console.log("no data");
+                }
+            })
+
             db.collection("meetings").insert(myobj, function (err, result) {
                 if (err) {
                     res.statusCode = 500;
                     res.statusText = "Internal Server Error";
                     return;
                 }
-                db.collection("meetings").update(
-                    {
-                        "meeting_name": meetingName,
-                        "email": email
-                    }, {
-                        $push: {
-                            "minutes": {
-                                "bullet_points": minute,
-                                "updated_by": name,
-                                "tag": tag
-                            }
-                        }
-                    },
-                    function (err, result) {
-                        if (err) {
-                            res.statusCode = 500;
-                            res.statusText = "Internal Server Error";
-                            return;
-                        }
-                        res.statusCode = 200;
-                        res.statusText = "ok";
-                        res.send({msg: "successfully added minute", success: true, statusCode: 200});
-                        return;
-                    });
+
+
+                //     db.collection("meetings").update(
+                //         {
+                //             "meeting_name": meetingName,
+                //             "email": email
+                //         }, {
+                //             $push: {
+                //                 "minutes": {
+                //                     "bullet_points": minute,
+                //                     "updated_by": name,
+                //                     "tag": tag
+                //                 }
+                //             }
+                //         },
+                //         function (err, result) {
+                //             if (err) {
+                //                 res.statusCode = 500;
+                //                 res.statusText = "Internal Server Error";
+                //                 return;
+                //             }
+                //             res.statusCode = 200;
+                //             res.statusText = "ok";
+                //             res.send({msg: "successfully added minute", success: true, statusCode: 200});
+                //           return;
+                // });
                 db.close();
+                res.statusCode = 200;
+                res.send({msg: "New meeting is created", success: true, data: myobj});
+                return;
             });
         }
-        else{
+
+        else {
             res.statusCode = 404;
             res.statusText = "Precondition Failed";
             return;
         }
 
+
     });
-
-
-};
+}
 
 exports.signup = (req,res,err)=>{
     var name= req.body.name;
@@ -446,6 +670,7 @@ exports.editMinute = (req,res,next) => {
     var bulletPoint = req.body.minute;
     var tag = req.body.tag;
     var name = req.body.name;
+    var codeID = req.body.codeID;
     var i =1;
    console.log(meetingName);
     MongoClient.connect(url,function (err, db) {
@@ -465,6 +690,7 @@ exports.editMinute = (req,res,next) => {
                             "bullet_points": desc,
                             "tag": tag,
                             "updated_by": name,
+                            "codeID": codeID
                         }
                     }
             }, function (err,result) {
@@ -488,6 +714,18 @@ exports.editMinute = (req,res,next) => {
 
 
 };
+//
+// exports.sendEndVal = (req,res,next) => {
+// var email = req.body.email;
+// var authToken = req.body.auth_token;
+// var
+//     MongoClient.connect(url,function (err, db) {
+//
+//         db.collection("meetings").find().toArray(function (err,result) {
+//         });
+//         db.close();
+//     });
+// };
 function authenticateUser(tableName, email, authToken, callback){
     console.log("I am being called");
     var bson = {email: email, auth_token: authToken};
@@ -509,4 +747,5 @@ function authenticateUser(tableName, email, authToken, callback){
             }
         });
     });
+
 }

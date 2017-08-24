@@ -45,6 +45,7 @@ app.post('/upload', upload.single('file'),mainController.upload);
 app.post('/allfiles',mainController.allFiles);
 app.post('/show',jsonParser,mainController.showFile);
 app.post('/edit',jsonParser,mainController.editFile);
+// app.post('/send/value', jsonParser, mainController.sendEndVal);
 app.post('/minute/edit', jsonParser,mainController.editMinute);
 var server = app.listen(process.env.PORT||8080, function () {
    var host = server.address().address

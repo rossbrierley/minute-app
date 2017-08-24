@@ -33,7 +33,7 @@
                             <td md-cell></td>
                         </tr>
                         <tr md-row md-select md-auto-select ng-repeat="meeting in thisMeet.minutes">
-                            <td md-cell>{{thisMeet.tag.code + '-' + '00' + ($index+1)}}</td>
+                            <td md-cell>{{meeting.codeID}}</td>
                             <td md-cell>{{meeting.bullet_points}}</td>
                            <td md-cell style="text-align: right;">
                                 <md-button class="md-icon-button" aria-label="Edit" ng-click="edit($index)">
@@ -75,7 +75,7 @@
                 <td md-cell>{{thisMeet.presents}}</td>
             </tr>
             <tr md-row md-select md-auto-select ng-repeat="meeting in thisMeet.minutes">
-                <td md-cell>{{thisMeet.tag.code + '-' + '00' + ($index+1)}}</td>
+                <td md-cell>{{meeting.codeID}}</td>
                 <td md-cell>{{meeting.bullet_points}}</td>
             </tr>
             </tbody>

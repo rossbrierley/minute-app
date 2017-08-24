@@ -1,6 +1,6 @@
 (function() {
     angular.module('fileManager')
-        .controller('previousMinuteController', ['$scope', '$rootScope', 'dataServices', '$http',  '$state','$mdDialog', function($scope, $rootScope, dataServices, $http, $state,$mdDialog) {
+        .controller('previousMinuteController', ['$scope', '$rootScope', 'dataServices', '$http',  '$state','$mdDialog','$cookies', function($scope, $rootScope, dataServices, $http, $state,$mdDialog,$cookies) {
             console.log('previousMinuteController');
             $rootScope.meetings = [];
 
@@ -9,7 +9,9 @@
                 "auth_token": sessionStorage.authToken
             };
             console.log(sessionStorage);
-
+            var c = sessionStorage.count;
+            $scope.co = Number(c||0);
+            $rootScope.count = Number(($scope.co+1)||0);
             dataServices.fetchCategory(data).then(function (response) {
                 console.log(response);
                 $rootScope.tags = response.data.data;
@@ -59,7 +61,7 @@
                     clickOutsideToClose: true
                 });
             };
-            function addController($scope,$mdDialog, $rootScope) {
+            function addController($scope,$mdDialog, $rootScope, $cookies) {
                 console.log($rootScope.index);
                 $scope.submit = function () {
                     console.log($rootScope.meetings);
@@ -68,9 +70,18 @@
                     newMeet.meetingName =$rootScope.thisMeet.meeting_name;
                     newMeet.email = sessionStorage.email;
                     newMeet.minute = $scope.description;
-                    console.log(newMeet);
+                    newMeet.tag = $cookies.getObject('tag');
+                     var codeID = newMeet.tag.code;
+                    console.log(codeID);
+                    newMeet.codeID = codeID
+
                     dataServices.doMeeting(newMeet).then(function (response) {
                         console.log(response);
+                        sessionStorage.count = response.data.count;
+                        console.log(sessionStorage.count + 1);
+                        var c = sessionStorage.count;
+                        $scope.co = Number(c||0);
+                        $rootScope.count = Number(($scope.co+1)||0);
                         $rootScope.thisMeet.minutes.push(newMeet);
                         $rootScope.thisMeet.minutes[$rootScope.thisMeet.minutes.length - 1].bullet_points =  $scope.description;
                     }, function (error){
@@ -80,7 +91,7 @@
                 };
             }
             $scope.edit = function(index,ev) {
-                $rootScope.ind = index;
+                $rootScope.index = index;
                 $mdDialog.show({
                     controller: editController,
                     templateUrl: 'views/edit-dialog.html',
@@ -96,13 +107,15 @@
                         editData.description = $scope.description;
                         editData.email = sessionStorage.email;
                         editData.meetingName = $rootScope.thisMeet.meeting_name;
-                        editData.minute = $rootScope.thisMeet.minutes[$rootScope.ind].bullet_points;
+                        editData.minute = $rootScope.thisMeet.minutes[$rootScope.index].bullet_points;
                         editData.name = sessionStorage.name;
                         editData.tag = $rootScope.thisMeet.tag;
+                        editData.tag.codeID = $rootScope.thisMeet.minutes[$rootScope.index].codeID;
+                        editData.codeID = $rootScope.thisMeet.minutes[$rootScope.index].codeID;
+                        console.log(editData);
                         dataServices.doEdit(editData).then(function (response) {
                             alert(response.data.msg);
-                            $rootScope.thisMeet.minutes[$rootScope.ind].bullet_points = $scope.description;
-
+                            $rootScope.thisMeet.minutes[$rootScope.index].bullet_points = $scope.description;
                         },function (error) {
                             console.log(error);
                         })

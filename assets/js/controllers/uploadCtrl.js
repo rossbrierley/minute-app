@@ -26,7 +26,8 @@
                function addController($scope,$mdDialog, $rootScope) {
                    $scope.tags = $rootScope.tags;
                    $scope.datas = {};
-
+                   $scope.datas.email = sessionStorage.email;
+                   $scope.datas.auth_token = sessionStorage.authToken;
                        $scope.submit = function (file, datas) {
                            Upload.upload({
                                url: '/upload/add',

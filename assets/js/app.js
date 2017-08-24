@@ -1,5 +1,5 @@
 (function(){
-	angular.module('fileManager',['ui.router','ngRoute','LocalStorageModule', 'ngMaterial', 'ngMdIcons', 'ng-fx', 'ngAnimate','ngFileUpload','base64','ngSanitize','md.data.table','htmlToPdfSave'])
+	angular.module('fileManager',['ui.router','ngRoute','LocalStorageModule', 'ngMaterial', 'ngMdIcons', 'ng-fx', 'ngAnimate','ngFileUpload','base64','ngSanitize','md.data.table','htmlToPdfSave','ngCookies'])
 	.config(['$stateProvider', '$mdThemingProvider','$urlRouterProvider', function($stateProvider, $mdThemingProvider,$urlRouterProvider) {
         $stateProvider
             .state('/', {
