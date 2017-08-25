@@ -320,24 +320,32 @@ exports.newMeeting = (req,res,err)=>
 
                 }
                 if(result.length>0){
+                    var j = 0;
                     for(var i=0; i<result.length; i++) {
                         if(result[i].minutes === undefined)
                         {
-                            console.log("In first");
-                            count1 = count1+0;
+                            if(i >= j) {
+                                console.log("In first");
+                                count = count + 0;
+                            }
                         }
                         else if(result[i].minutes && result[i].minutes[0].ends_with === undefined) {
-                            console.log("In second");
-                            count2 = count2 + result[i].minutes.length;
+                            if(i >= j) {
+                                console.log("In second");
+                                count = count + result[i].minutes.length;
+                            }
 
                         }
                         else if(result[i].minutes && result[i].minutes[0].ends_with){
-                            console.log("In third");
-                            count3 = count3+result[i].minutes[0].ends_with;
+                            if(i >= j) {
+                                console.log("In third");
+                                count = result[i].minutes[0].ends_with;
+                                j + 1;
+                            }
                         }
                     }
                     console.log("the length is: "+count);
-                    count = count1+count2+count3;
+                    count = count+1;
                     codeID = codeID+ " - 00"+ count;
                     console.log(codeID);
                     db.collection("meetings").update(
@@ -714,18 +722,34 @@ exports.editMinute = (req,res,next) => {
 
 
 };
-//
-// exports.sendEndVal = (req,res,next) => {
-// var email = req.body.email;
-// var authToken = req.body.auth_token;
-// var
-//     MongoClient.connect(url,function (err, db) {
-//
-//         db.collection("meetings").find().toArray(function (err,result) {
-//         });
-//         db.close();
-//     });
-// };
+exports.sendEndVal = (req,res,next) => {
+var email = req.body.email;
+var authToken = req.body.auth_token;
+var tag = req.body.tag;
+console.log(tag);
+    MongoClient.connect(url,function (err, db) {
+
+        db.collection("meetings").find({'tag.code': tag.code}).toArray(function (err,result) {
+            if(result.length>0){
+                console.log(result[result.length-1]);
+                 var min  = result[result.length-1].minutes;
+                 var len = min.length-1;
+               var  data = {
+                   ends_with: result[result.length-1].minutes[len].codeID
+                }
+                res.statusCode = 200;
+                res.statusText = "ok";
+                res.send({msg: "found last minute", success: true, data: data});
+            }
+            else{
+                res.statusText =200;
+                res.statusText = "ok";
+                res.send({msg: "Data not found", success: true});
+            }
+        });
+        db.close();
+    });
+};
 function authenticateUser(tableName, email, authToken, callback){
     console.log("I am being called");
     var bson = {email: email, auth_token: authToken};

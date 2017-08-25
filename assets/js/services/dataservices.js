@@ -71,6 +71,9 @@
                 forgotPassword: function(data) {
                     return $http.post('/forgotpassword/link', data);
                 },
+                getMinute : function (data) {
+                    return $http.post('/get/value', data);
+                }
 
             }
         }]);

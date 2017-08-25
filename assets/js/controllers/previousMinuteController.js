@@ -73,22 +73,36 @@
                     newMeet.tag = $cookies.getObject('tag');
                      var codeID = newMeet.tag.code;
                     console.log(codeID);
-                    newMeet.codeID = codeID
+                    newMeet.codeID = codeID;
 
                     dataServices.doMeeting(newMeet).then(function (response) {
-                        console.log(response);
-                        sessionStorage.count = response.data.count;
-                        console.log(sessionStorage.count + 1);
-                        var c = sessionStorage.count;
-                        $scope.co = Number(c||0);
-                        $rootScope.count = Number(($scope.co+1)||0);
-                        $rootScope.thisMeet.minutes.push(newMeet);
-                        $rootScope.thisMeet.minutes[$rootScope.thisMeet.minutes.length - 1].bullet_points =  $scope.description;
-                    }, function (error){
+
+                            sessionStorage.count = response.data.count;
+                            console.log(sessionStorage.count + 1);
+                            var c = sessionStorage.count;
+                            $scope.co = Number(c || 0);
+                            $rootScope.count = Number(($scope.co + 1) || 0);
+                            newMeet.codeID = codeID + " - 00" + $rootScope.count
+                        if($rootScope.thisMeet.minutes === undefined)
+                        {
+                            $rootScope.thisMeet.minutes = {};
+                            $rootScope.thisMeet.minutes.codeID  = newMeet.codeID;
+                            $rootScope.thisMeet.minutes.bullet_points = newMeet.minute;
+                            console.log($rootScope.thisMeet);
+                        }
+                        else {
+                            $rootScope.thisMeet.minutes.push(newMeet);
+                            $rootScope.thisMeet.minutes[$rootScope.thisMeet.minutes.length - 1].bullet_points = $scope.description;
+                        }
+
+                        }, function (error){
                         console.log("Error");
                     });
+
                     $mdDialog.hide();
+
                 };
+
             }
             $scope.edit = function(index,ev) {
                 $rootScope.index = index;

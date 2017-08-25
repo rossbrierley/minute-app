@@ -68,6 +68,23 @@
                            console.log('progress: ' + progressPercentage + '% ');
                        });
                    }; */
+
+                 $scope.getMinute = function (code) {
+
+                     var data = {};
+                     data.email = sessionStorage.email;
+                     data.auth_token = sessionStorage.authToken;
+                     data.tag = code;
+
+                     dataServices.getMinute(data).then(function (response) {
+
+                         $scope.start_with = response.data.data.ends_with;
+                         alert(response.data.msg);
+
+                     }, function (error) {
+                       console.log(error.data.msg);
+                     })
+                 }
                    }
 
 

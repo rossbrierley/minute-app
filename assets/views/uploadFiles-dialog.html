@@ -32,7 +32,7 @@
                                  md-items="item in tags | filter:searchText"
                                  md-item-text="item.code"
                                  md-min-length="2"
-                                 placeholder="enter an tag name"
+                                 placeholder="enter tag"
                                  md-floating-label="Tag">
                     <md-item-template>
                         <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.group_name}} - {{item.code}}</span>
@@ -41,6 +41,10 @@
                         No tag/category matching "{{searchText}}" was found.
                     </md-not-found>
                 </md-autocomplete>
+
+                <div layout="row" layout-align="end center">
+                    <md-button class="md-primary" ng-click = "getMinute(datas.category)">Find the Last Minute</md-button>
+                </div>
 
             </div>
             <div layout="row">
