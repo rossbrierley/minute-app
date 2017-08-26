@@ -23,7 +23,8 @@
                        clickOutsideToClose: true
                    });
                };
-               function addController($scope,$mdDialog, $rootScope) {
+               function addController($scope,$mdDialog, $rootScope, $mdToast) {
+                   $scope.disableFeild = true;
                    $scope.tags = $rootScope.tags;
                    $scope.datas = {};
                    $scope.datas.email = sessionStorage.email;
@@ -36,12 +37,14 @@
 
 
                            }).then(function (resp) {
+                               $mdToast.show($mdToast.simple().textContent(resp.data.msg));
                                console.log('Success ' + resp.data + 'uploaded. Response: ' + resp.fal);
                            }, function (resp) {
+                               $mdToast.show($mdToast.simple().textContent(resp.data.msg));
                                console.log('Error status: ' + resp.status);
                            }, function (evt) {
-                               var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-                               console.log('progress: ' + progressPercentage + '% ');
+                               $scope.progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+                               console.log('progress: ' + $scope.progressPercentage + '% ');
                            });
                         /*   dataServices.doUpload(file).then(function (response) {
                            }, function (error) {
@@ -51,38 +54,36 @@
                            $mdDialog.hide();
                        };
 
-                 /*  $scope.upload = function (file) {
-                       console.log(file);
-                       Upload.upload({
-                           url: '/upload/add',
-                           arrayKey: '',
-                           data: {file: file},
 
-
-                       }).then(function (resp) {
-                           console.log('Success ' + resp.data + 'uploaded. Response: ' + resp.fal);
-                       }, function (resp) {
-                           console.log('Error status: ' + resp.status);
-                       }, function (evt) {
-                           var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-                           console.log('progress: ' + progressPercentage + '% ');
-                       });
-                   }; */
 
                  $scope.getMinute = function (code) {
-
                      var data = {};
                      data.email = sessionStorage.email;
                      data.auth_token = sessionStorage.authToken;
                      data.tag = code;
 
                      dataServices.getMinute(data).then(function (response) {
+                         $scope.disableFeild = false;
+                         if(response.data.success === true){
+                             $mdToast.show($mdToast.simple().textContent(response.data.msg));
+                             var lastMeet = response.data.data.ends_with;
+                             var idArray = lastMeet.split(' - ');
+                             var id = idArray[1];
+                             $scope.datas.start_with = id.substring(2);
+                             $scope.disable = true;
 
-                         $scope.start_with = response.data.data.ends_with;
-                         alert(response.data.msg);
+                         }
+                         else if(response.data.success === false){
+                                 $mdToast.show($mdToast.simple().textContent(response.data.msg));
+                                 $scope.disable = false;
+                                 $scope.datas.start_with = '';
+                             }
+
 
                      }, function (error) {
-                       console.log(error.data.msg);
+                         $mdToast.show($mdToast.simple().textContent(error.data.msg));
+                     }).catch(function (error) {
+                         $mdToast.show($mdToast.simple().textContent(error.data.msg));
                      })
                  }
                    }

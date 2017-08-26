@@ -76,23 +76,27 @@
                     newMeet.codeID = codeID;
 
                     dataServices.doMeeting(newMeet).then(function (response) {
-
+                            console.log(response.data);
                             sessionStorage.count = response.data.count;
-                            console.log(sessionStorage.count + 1);
-                            var c = sessionStorage.count;
-                            $scope.co = Number(c || 0);
-                            $rootScope.count = Number(($scope.co + 1) || 0);
-                            newMeet.codeID = codeID + " - 00" + $rootScope.count
+                             var c = sessionStorage.count;
+                             $scope.co = Number(c || 0);
+                             //$rootScope.count = Number(($scope.co + 1) || 0);
+                        $rootScope.count = Number(($scope.co) || 0);
+                             console.log($rootScope.count);
+                             newMeet.codeID = codeID + " - 00" + $rootScope.count
                         if($rootScope.thisMeet.minutes === undefined)
                         {
-                            $rootScope.thisMeet.minutes = {};
-                            $rootScope.thisMeet.minutes.codeID  = newMeet.codeID;
-                            $rootScope.thisMeet.minutes.bullet_points = newMeet.minute;
-                            console.log($rootScope.thisMeet);
-                        }
-                        else {
+                            $rootScope.thisMeet.minutes = [];
                             $rootScope.thisMeet.minutes.push(newMeet);
                             $rootScope.thisMeet.minutes[$rootScope.thisMeet.minutes.length - 1].bullet_points = $scope.description;
+                            $rootScope.thisMeet.minutes[$rootScope.thisMeet.minutes.length - 1].codeID = newMeet.codeID;
+                            console.log($rootScope.thisMeet.minutes);
+                        }
+                        else {
+                            console.log($rootScope.thisMeet.minutes);
+                            $rootScope.thisMeet.minutes.push(newMeet);
+                            $rootScope.thisMeet.minutes[$rootScope.thisMeet.minutes.length - 1].bullet_points = $scope.description;
+                            $rootScope.thisMeet.minutes[$rootScope.thisMeet.minutes.length - 1].codeID = newMeet.codeID;
                         }
 
                         }, function (error){

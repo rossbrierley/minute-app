@@ -5,27 +5,27 @@
                 <h2 flex md-truncate>Upload Files</h2>
             </div>
         </md-toolbar>
-        <form layout-padding>
+        <form layout-padding name="uploadForm">
             <div layout="row">
                 <md-input-container class="md-block" flex>
                     <label>Created At</label>
-                    <md-datepicker ng-model="datas.created_at" md-placeholder="Created At"></md-datepicker>
+                    <md-datepicker ng-model="datas.created_at" md-placeholder="Created At" required></md-datepicker>
                 </md-input-container>
             </div>
             <div layout="row">
                 <md-input-container class="md-block" flex>
                     <label>Created By</label>
-                    <input ng-model="datas.created_by" md-select-on-focus>
+                    <input ng-model="datas.created_by" md-select-on-focus required>
                 </md-input-container>
             </div>
             <div layout="row">
                 <md-input-container class="md-block" flex>
                     <label>Meeting Name</label>
-                    <input ng-model="datas.meeting_name" md-select-on-focus>
+                    <input ng-model="datas.meeting_name" md-select-on-focus required>
                 </md-input-container>
             </div>
             <div layout="row">
-               <md-autocomplete flex
+               <md-autocomplete flex required
                                 md-selected-item="datas.category"
                                  md-search-text="searchText"
                                  md-selected-item-change="selectedItemChange(item)"
@@ -47,18 +47,19 @@
                 </div>
 
             </div>
-            <div layout="row">
+
+            <div layout="row" ng-hide="disableFeild">
                 <md-input-container class="md-block" flex>
                     <label>Starts with</label>
-                    <input ng-model="datas.start_with" md-select-on-focus>
+                    <input ng-model="datas.start_with" md-select-on-focus ng-disabled="disable" required>
                 </md-input-container>
                 <md-input-container class="md-block" flex>
                     <label>Ends with</label>
-                    <input ng-model="datas.ends_with" md-select-on-focus>
+                    <input ng-model="datas.ends_with" md-select-on-focus required>
                 </md-input-container>
             </div>
-           <div layout="row" layout-align="end center">
-                <md-button class="md-primary" ngf-select="submit($file, datas)">Upload file and SuBMIT</md-button>
+           <div layout="row" layout-align="end center" ng-hide="disableFeild">
+                <md-button class="md-primary" ngf-select="submit($file, datas)" ng-disabled="uploadForm.$invalid">Upload file and SuBMIT</md-button>
             </div>
         </form>
     </md-dialog-content>
