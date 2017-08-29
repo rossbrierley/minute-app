@@ -20,7 +20,7 @@ app.use(cors());
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
       if(mime.extension(file.mimetype) === "docx") {
-          cb(null, 'server/uploads/')
+          cb(null, 'server/uploads/');
           //  cb(null, './uploads/');
       }
       else{

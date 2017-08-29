@@ -1,7 +1,9 @@
 (function(){
 	angular.module('fileManager',['ui.router','ngRoute','LocalStorageModule', 'ngMaterial', 'ngMdIcons', 'ng-fx', 'ngAnimate','ngFileUpload','base64','ngSanitize','md.data.table','htmlToPdfSave','ngCookies'])
-	.config(['$stateProvider', '$mdThemingProvider','$urlRouterProvider', function($stateProvider, $mdThemingProvider,$urlRouterProvider) {
-        $stateProvider
+	.config(['$stateProvider', '$mdThemingProvider','$urlRouterProvider','$locationProvider' , function($stateProvider, $mdThemingProvider,$urlRouterProvider, $locationProvider) {
+        $locationProvider
+            .html5Mode(false);
+	    $stateProvider
             .state('/', {
                 url: '/login',
                 templateUrl: '/views/login.html',
@@ -84,7 +86,8 @@
                     }
                 }
 
-            });
+            })
+            $urlRouterProvider.otherwise('/login');;
 
 			/*$routeProvider.when('/', {
 				templateUrl: 'views/upload.html',

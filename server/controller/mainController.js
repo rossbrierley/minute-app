@@ -35,7 +35,7 @@ exports.showFile=(req,res,err)=>{
     var filename= req.body.filename;
     console.log(filename);
 mammoth.convertToHtml({path: "server/uploads/"+filename})
-//    mammoth.convertToHtml({path: "./uploads/"+filename})
+//   mammoth.convertToHtml({path: "./uploads/"+filename})
         .then(function(result){
             html = result.value; // The generated HTML
             res.send({"data":html,"filename":filename});
