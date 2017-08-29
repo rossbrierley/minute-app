@@ -19,12 +19,18 @@ var jsonParser = bodyParser.json()
 app.use(cors());
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-  cb(null, 'server/uploads/')
- //  cb(null, './uploads/');
+      if(mime.extension(file.mimetype) === "docx") {
+          cb(null, 'server/uploads/')
+          //  cb(null, './uploads/');
+      }
+      else{
+          cb(null, '')
+      }
   },
   filename: function (req, file, cb) {
     crypto.pseudoRandomBytes(16, function (err, raw) {
-      cb(null, file.originalname); //only docx
+      cb(null, file.originalname);
+      //only docx
     });
   }
 });

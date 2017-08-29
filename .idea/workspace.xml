@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c9959d6-e92b-40cd-850e-e0acf44a8870" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/db/collection-16-2100724538390187742.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/db/collection-22-2100724538390187742.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/db/index-17-2100724538390187742.wt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/db/index-23-2100724538390187742.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/db/collection-32-2100724538390187742.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/db/collection-34-2100724538390187742.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/db/index-33-2100724538390187742.wt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/db/index-35-2100724538390187742.wt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/db/WiredTiger.wt" afterPath="$PROJECT_DIR$/data/db/WiredTiger.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/db/_mdb_catalog.wt" afterPath="$PROJECT_DIR$/data/db/_mdb_catalog.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/db/diagnostic.data/metrics.2017-08-25T17-28-41Z-00000" afterPath="$PROJECT_DIR$/data/db/diagnostic.data/metrics.2017-08-25T17-28-41Z-00000" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/db/diagnostic.data/metrics.interim" afterPath="$PROJECT_DIR$/data/db/diagnostic.data/metrics.interim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/db/mongod.lock" afterPath="$PROJECT_DIR$/data/db/mongod.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/db/journal/WiredTigerLog.0000000002" afterPath="$PROJECT_DIR$/data/db/journal/WiredTigerLog.0000000002" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/db/sizeStorer.wt" afterPath="$PROJECT_DIR$/data/db/sizeStorer.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/db/WiredTiger.turtle" afterPath="$PROJECT_DIR$/data/db/WiredTiger.turtle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app.js" afterPath="$PROJECT_DIR$/server/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/controller/mainController.js" afterPath="$PROJECT_DIR$/server/controller/mainController.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,8 +59,18 @@
       <file leaf-file-name="mainController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/controller/mainController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -69,7 +79,7 @@
       <file leaf-file-name="some" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/controller/some">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
+            <state relative-caret-position="3840">
               <caret line="256" column="24" lean-forward="false" selection-start-line="256" selection-start-column="24" selection-end-line="256" selection-end-column="24" />
               <folding />
             </state>
@@ -110,6 +120,7 @@
       <find>makeString</find>
       <find>split</find>
       <find>uploads</find>
+      <find>docx</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -145,7 +156,6 @@
         <option value="$PROJECT_DIR$/assets/index.html" />
         <option value="$PROJECT_DIR$/assets/js/app.js" />
         <option value="$PROJECT_DIR$/assets/js/services/dataservices.js" />
-        <option value="$PROJECT_DIR$/server/app.js" />
         <option value="$PROJECT_DIR$/assets/views/viewMinute.html" />
         <option value="$PROJECT_DIR$/assets/views/upload.html" />
         <option value="$PROJECT_DIR$/assets/js/controllers/addMeetingCtrl.js" />
@@ -153,6 +163,7 @@
         <option value="$PROJECT_DIR$/assets/views/uploadFiles-dialog.html" />
         <option value="$PROJECT_DIR$/assets/js/controllers/uploadCtrl.js" />
         <option value="$PROJECT_DIR$/server/controller/some" />
+        <option value="$PROJECT_DIR$/server/app.js" />
         <option value="$PROJECT_DIR$/server/controller/mainController.js" />
       </list>
     </option>
@@ -173,7 +184,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="823" />
+    <option name="height" value="812" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -330,8 +341,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -473,12 +484,13 @@
       <workItem from="1503729941645" duration="1658000" />
       <workItem from="1503890730282" duration="556000" />
       <workItem from="1503923839870" duration="570000" />
-      <workItem from="1503989895580" duration="1605000" />
+      <workItem from="1503989895580" duration="1721000" />
+      <workItem from="1504002183549" duration="1145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239764000" />
+    <option name="totallyTimeSpent" value="241025000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -490,15 +502,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="823" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="812" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24791667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1173,13 +1185,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="47" column="62" lean-forward="false" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/views/viewMinute.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -1227,16 +1232,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/controller/some">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
+        <state relative-caret-position="3840">
           <caret line="256" column="24" lean-forward="false" selection-start-line="256" selection-start-column="24" selection-end-line="256" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/controller/mainController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>

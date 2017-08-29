@@ -5,6 +5,7 @@ const mammoth = require("mammoth");
 var officeClippy = require('office-clippy');
 const express =require('express');
 var random = require('randomstring');
+var mime = require('mime');
 
 const app =express();
 var MongoClient = require('mongodb').MongoClient;
@@ -112,9 +113,8 @@ exports.uploads=(req,res,err)=>{
     else {
         console.log("hello you" + req.file.filename)
         var filename = req.file.filename;
-        var files = filename.split('.');
-        var ext = files[1];
-        if (ext !== "docx") {
+        var extension = mime.extension(req.file.mimetype);
+        if (extension !== "docx") {
             res.statusCode = 402;
             res.statusText = "Precondition Failed";
             res.send({msg: "Please upload a docx extension only", success: false});
