@@ -1,0 +1,386 @@
+func stripePaymentHandler(request: HTTPRequest, _ responses: HTTPResponse){
+
+    JSONDecoding.registerJSONDecodable(name: PaymentModel.registerName, creator: { return PaymentModel() })
+
+    JSONDecoding.registerJSONDecodable(name: ChurchModel.registerName, creator: { return ChurchModel()})
+
+    let params :String = request.postBodyString!
+        print(" yo i'm in here \(params)")
+    var paymentData = [String:Any]()
+
+    responses.setHeader(.contentType, value: "application/json")
+
+
+    guard let payment = try? params.jsonDecode() as! UserPaymentModel else{
+        responses.status = HTTPResponseStatus.badRequest
+        responses.appendBody(string: responseMsg(msg: msgConstants.incorrectData, success: false))
+        responses.completed()
+        return
+    }
+
+    let email = payment.userEmail
+    let authToken = payment.authToken
+    let productID = payment.productID
+    let discountCoupon = payment.discountCoupon
+    let subscription = payment.userPackageName
+    print("this is it \(email, authToken)")
+
+    let user = payment.user
+    print(" \(user)")
+
+    try? print(payment.jsonEncodedString())
+
+
+
+
+        let client = try! MongoClient(uri: mongoUri)
+    let paymentCollection =  MongoCollection(
+        client: client,
+        databaseName: dbName,
+        collectionName: dbTableConstants.userPaymentTable)
+
+    let userCollection =  MongoCollection(
+        client: client,
+        databaseName: dbName,
+        collectionName: dbTableConstants.userTable)
+
+
+
+    if(authenticateUser(tableName: dbTableConstants.churchTable, email: email, authToken: authToken))
+    {
+
+        let customerUrl = "https://api.stripe.com/v1/customers"
+
+        let subscribeUrl = "https://api.stripe.com/v1/subscriptions"
+
+        let stripeApiKey = secretApiKey
+
+        let token = payment.cardToken
+
+        let postParamString = "description=" + email + "&email=" + email + "&source=" + token
+        print(postParamString)
+
+        var customerId = ""
+        var subscriptionId = ""
+        let postHeaderString = "application/x-www-form-urlencoded"
+        let postAuthorizationString = "Bearer \(stripeApiKey)"
+
+        print(postParamString)
+
+        var errorMsg = ""
+        let request =
+        try
+        ? CURLRequest(customerUrl,.failOnError,
+    .
+        addHeaders([(CURLRequest.Header.Name.contentType, "application/x-www-form-urlencoded"),
+            (CURLRequest.Header.Name.authorization, postAuthorizationString)]),
+    .
+        postString(postParamString)
+    )
+    .
+        perform
+        {
+            confirmation in
+            do {
+                let response =
+                try
+                confirmation()
+                let json
+            :
+                [String
+            :
+                Any
+            ]
+                = response.bodyJSON
+                print(json)
+
+                for (key, value) in
+                json
+                {
+                    if (key == "id") {
+                        customerId = value as !String
+                        print("customerID is \(customerId)")
+                    }
+                }
+                var postSubscribeString = ""
+                if (discountCoupon != "") {
+                    postSubscribeString = "customer=" + customerId + "&plan=" + subscription + "&coupon=" + discountCoupon
+                }
+                else {
+                    postSubscribeString = "customer=" + customerId + "&plan=" + subscription
+                }
+                let subscriptionRequest =
+                try
+                ? CURLRequest(subscribeUrl,.failOnError,
+            .
+                addHeaders([(CURLRequest.Header.Name.contentType, "application/x-www-form-urlencoded"),
+                    (CURLRequest.Header.Name.authorization, postAuthorizationString)]),
+            .
+                postString(postSubscribeString)
+            )
+            .
+                perform
+                {
+                    confirmation in
+                    do {
+                        let response =
+                        try
+                        confirmation()
+                        let json
+                    :
+                        [String
+                    :
+                        Any
+                    ]
+                        = response.bodyJSON
+                        print(json)
+
+                        for (key, value) in
+                        json
+                        {
+                            if (key == "id") {
+                                payment.transactionID = value as !String
+                                print("subscriptionID is \(payment.transactionID)")
+                            }
+                            if (key == "customer") {
+                                payment.customerId = value as !String
+                            }
+                            if (key == "plan") {
+                                let planValue = value as ? [String : Any
+                            ]
+                                guard
+                                let plan =
+                                try
+                                ? planValue as ? [String : Any
+                            ] else
+                                {
+                                    return
+                                }
+                                payment.userPackageName = planValue ? ["name"] as !String
+                                    print(payment.userPackageName)
+
+                                payment.currency = planValue ? ["currency"] as !String
+
+                            }
+                        }
+
+
+                        let paymentBson =
+                        try
+                        ? BSON.init(json : payment.jsonEncodedString()
+                    )
+                        paymentBson ?
+                    .
+                        append(key
+                    :
+                        jsonConstants.address, string
+                    :
+                        user.userAddress
+                    )
+                        paymentBson ?
+                    .
+                        append(key
+                    :
+                        jsonConstants.churchId, string
+                    :
+                        user.churchId
+                    )
+
+
+                        let serverResult = paymentCollection.insert(document
+                    :
+                        paymentBson
+                        !
+                    )
+                        print("The payment to save is\(paymentBson!)")
+
+                        let queryBson = BSON()
+                        queryBson.append(key
+                    :
+                        jsonConstants.email, string
+                    :
+                        email
+                    )
+                        queryBson.append(key
+                    :
+                        jsonConstants.authToken, string
+                    :
+                        authToken
+                    )
+
+                        let serverFindResult = userCollection.find(query
+                    :
+                        queryBson
+                    )
+
+                        var bsonUpdateString = serverFindResult ?
+                    .
+                        next() ?
+                    .
+                        asString
+
+                        if (bsonUpdateString != "") {
+
+                            let userResult =
+                            try
+                            ? bsonUpdateString ?
+                        .
+                            jsonDecode() as !UserModel
+                            userResult ?
+                        .
+                            userAddress = user.userAddress
+                            userResult ?
+                        .
+                            phone = user.phone
+                            userResult ?
+                        .
+                            isSubscribed = true
+                            userResult ?
+                        .
+                            productID = productID
+                            userResult ?
+                        .
+                            userTrialEndDate = ""
+                            //                print(usersAllowed)
+
+                            let userBson =
+                            try
+                            ? BSON.init(json : userResult.jsonEncodedString()
+                        )
+                            let serverUserResult = userCollection.update(selector
+                        :
+                            queryBson, update
+                        :
+                            userBson
+                            !
+                        )
+                        }
+
+                        switch serverResult {
+                            case .
+                                success:
+                                    responses.status = HTTPResponseStatus.ok
+                                responses.appendBody(string
+                            :
+                                responseMsg(msg
+                            :
+                                "Payment info saved successfully.", success
+                            :
+                                true
+                            ))
+                            default:
+                                responses.status = HTTPResponseStatus.ok
+                                responses.appendBody(string
+                            :
+                                responseMsg(msg
+                            :
+                                "Payment info not saved", success
+                            :
+                                false
+                            ))
+
+
+                        }
+
+                        defer
+                        {
+                            paymentCollection.close()
+                            client.close()
+                        }
+
+                        responses.completed()
+
+
+                    }
+                catch
+                    let error
+                    as
+                    CURLResponse.Error
+                    {
+                        print("Failed: response code \(error.response.responseCode)")
+                        errorMsg = error.response.bodyString;
+                        responses.appendBody(string
+                    :
+                        self.responseMsg(msg
+                    :
+                        "Payment Failed", success
+                    :
+                        false
+                    ))
+                        responses.status = HTTPResponseStatus.internalServerError
+                        responses.completed()
+                        return
+
+                    }
+                catch
+                    {
+                        print("Fatal error \(error)")
+                        responses.appendBody(string
+                    :
+                        self.responseMsg(msg
+                    :
+                        "Payment Failed", success
+                    :
+                        false
+                    ))
+                        responses.status = HTTPResponseStatus.internalServerError
+                        responses.completed()
+                        return
+
+                    }
+                }
+
+
+            }
+        catch
+            let error
+            as
+            CURLResponse.Error
+            {
+                print("Failed: response code \(error.response.responseCode)")
+                errorMsg = error.response.bodyString;
+                responses.appendBody(string
+            :
+                self.responseMsg(msg
+            :
+                "Payment Failed", success
+            :
+                false
+            ))
+                responses.status = HTTPResponseStatus.internalServerError
+                responses.completed()
+                return
+
+            }
+        catch
+            {
+                print("Fatal error \(error)")
+                responses.appendBody(string
+            :
+                self.responseMsg(msg
+            :
+                "Payment Failed", success
+            :
+                false
+            ))
+                responses.status = HTTPResponseStatus.internalServerError
+                responses.completed()
+                return
+
+            }
+        }
+
+
+
+
+
+
+    }else {
+        responses.setBody(string: self.responseMsg(msg: msgConstants.userAuthenticationFailed, success: false))
+        responses.status = HTTPResponseStatus.unauthorized
+    }
+
+
+
+}
+

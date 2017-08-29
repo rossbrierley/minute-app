@@ -134,100 +134,6 @@ exports.uploads=(req,res,err)=>{
             }
             MongoClient.connect(url, function (err, db) {
                 if (err) throw err;
-                db.collection("meetings").find({"tag.code": tag.code}).toArray(function (err, result) {
-
-                    if (err) {
-                        res.statusText = "Internal Server Error";
-                        res.statusCode = 500;
-                        return;
-
-                    }
-                    if (result.length > 0) {
-                        for (var i = 0; i < result.length; i++) {
-                            if (result[i].minutes === undefined) {
-                                count = count + 0;
-                            }
-                            else {
-                                count = count + result[i].minutes.length;
-
-                            }
-                        }
-                        console.log("the length is: " + count);
-                        count = endsWith;
-                        console.log("count is" + count);
-                        codeID = codeID + " - 00" + count;
-                        db.collection("meetings").insert(myobjson, function (err, result) {
-                            if (err) {
-                                res.statusCode = 500;
-                                res.statusText = "Internal Server Error";
-                                return;
-                            }
-                        });
-                        db.collection("meetings").update(
-                            {
-                                "meeting_name": meeting_name_file,
-                                "email": email
-                            }, {
-                                $push: {
-                                    "minutes": {
-                                        "starts_with": startsWith,
-                                        "bullet_points": filename_file,
-                                        "updated_by": created_by_file,
-                                        "tag": tag,
-                                        "codeID": codeID,
-                                        "ends_with": endsWith
-                                    }
-                                }
-                            },
-                            function (err, result) {
-                                if (err) {
-                                    res.statusCode = 500;
-                                    res.statusText = "Internal Server Error";
-                                    return;
-                                }
-                            });
-
-                        myobjson.count = count;
-                    }
-                    else {
-                        console.log("no data");
-                        count = count + endsWith;
-                        codeID = codeID + " - 00" + count;
-                        db.collection("meetings").insert(myobjson, function (err, result) {
-                            if (err) {
-                                res.statusCode = 500;
-                                res.statusText = "Internal Server Error";
-                                return;
-                            }
-                        });
-
-                        db.collection("meetings").update(
-                            {
-                                "meeting_name": meeting_name_file,
-                                "email": email
-                            }, {
-                                $push: {
-                                    "minutes": {
-                                        "stars_with": startsWith,
-                                        "bullet_points": filename_file,
-                                        "updated_by": created_by_file,
-                                        "tag": tag,
-                                        "codeID": codeID,
-                                        "ends_with": endsWith
-                                    }
-                                }
-                            },
-                            function (err, result) {
-                                if (err) {
-                                    res.statusCode = 500;
-                                    res.statusText = "Internal Server Error";
-                                    return;
-                                }
-                            });
-
-
-                    }
-                })
                 var myobj = {
                     created_at: created_at_file,
                     created_by: created_by_file,
@@ -255,13 +161,110 @@ exports.uploads=(req,res,err)=>{
                                 res.statusText = "Internal Server Error";
                                 return;
                             }
-                            res.statusCode = 200;
-                            res.statusText = "ok";
-                            res.send({msg: "file data successfully added", success: true, statusCode: 200});
-                            return;
+                            console.log("hello")
+                            db.collection("meetings").find({"tag.code": tag.code}).toArray(function (err, result) {
+
+                                if (err) {
+                                    res.statusText = "Internal Server Error";
+                                    res.statusCode = 500;
+                                    return;
+
+                                }
+                                if (result.length > 0) {
+                                    for (var i = 0; i < result.length; i++) {
+                                        if (result[i].minutes === undefined) {
+                                            count = count + 0;
+                                        }
+                                        else {
+                                            count = count + result[i].minutes.length;
+
+                                        }
+                                    }
+                                    console.log("the length is: " + count);
+                                    count = endsWith;
+                                    console.log("count is" + count);
+                                    codeID = codeID + " - 00" + count;
+                                    db.collection("meetings").insert(myobjson, function (err, result) {
+                                        if (err) {
+                                            res.statusCode = 500;
+                                            res.statusText = "Internal Server Error";
+                                            return;
+                                        }
+                                    });
+                                    db.collection("meetings").update(
+                                        {
+                                            "meeting_name": meeting_name_file,
+                                            "email": email
+                                        }, {
+                                            $push: {
+                                                "minutes": {
+                                                    "starts_with": startsWith,
+                                                    "bullet_points": filename_file,
+                                                    "updated_by": created_by_file,
+                                                    "tag": tag,
+                                                    "codeID": codeID,
+                                                    "ends_with": endsWith
+                                                }
+                                            }
+                                        },
+                                        function (err, result) {
+                                            if (err) {
+                                                res.statusCode = 500;
+                                                res.statusText = "Internal Server Error";
+                                                return;
+                                            }
+                                        });
+
+                                    myobjson.count = count;
+                                }
+                                else {
+                                    console.log("no data");
+                                    count = count + endsWith;
+                                    codeID = codeID + " - 00" + count;
+                                    db.collection("meetings").insert(myobjson, function (err, result) {
+                                        if (err) {
+                                            res.statusCode = 500;
+                                            res.statusText = "Internal Server Error";
+                                            return;
+                                        }
+                                    });
+
+                                    db.collection("meetings").update(
+                                        {
+                                            "meeting_name": meeting_name_file,
+                                            "email": email
+                                        }, {
+                                            $push: {
+                                                "minutes": {
+                                                    "stars_with": startsWith,
+                                                    "bullet_points": filename_file,
+                                                    "updated_by": created_by_file,
+                                                    "tag": tag,
+                                                    "codeID": codeID,
+                                                    "ends_with": endsWith
+                                                }
+                                            }
+                                        },
+                                        function (err, result) {
+                                            if (err) {
+                                                res.statusCode = 500;
+                                                res.statusText = "Internal Server Error";
+                                                return;
+                                            }
+                                        });
+                                      db.close();
+
+                                }
+                                res.statusCode = 200;
+                                res.statusText = "ok";
+                                res.send({msg: "file data successfully added", success: true, statusCode: 200});
+                                return;
+                            })
+
+
 
                         });
-                        db.close();
+
                     }
 
                 });
