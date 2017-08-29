@@ -15,6 +15,21 @@
 				}
 				$rootScope.items=$rootScope.item.splice(1);
 			}
+
+               $scope.deleteFile = function(item) {
+                   var filename = $rootScope.items[item];
+
+                   var data = {
+                       "email" : sessionStorage.email,
+                       "auth_token": sessionStorage.authToken,
+                       "file_name" : filename
+                   };
+
+                   dataServices.doDeleteFile(data).then(function (response){
+                       console.log(data);
+                   });
+               };
+
 			$scope.openDocument = function(item) {
 				var fileObj={
 				"filename":	$rootScope.items[item]

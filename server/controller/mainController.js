@@ -35,7 +35,7 @@ exports.showFile=(req,res,err)=>{
     var filename= req.body.filename;
     console.log(filename);
 mammoth.convertToHtml({path: "server/uploads/"+filename})
-//  mammoth.convertToHtml({path: "./uploads/"+filename})
+//    mammoth.convertToHtml({path: "./uploads/"+filename})
         .then(function(result){
             html = result.value; // The generated HTML
             res.send({"data":html,"filename":filename});
@@ -44,6 +44,61 @@ mammoth.convertToHtml({path: "server/uploads/"+filename})
 
         .done();
 };
+
+exports.deleteTag=(req,res,err)=>{
+var code=req.body.code;
+    MongoClient.connect(url, function(err, db) {
+        var bsonQuery={code:code};
+        db.collection("category").remove(bsonQuery,function (err, result) {
+            console.log(err);
+            res.statusCode = 200;
+            res.statusText = "ok";
+            res.send({msg: "tag deleted successfully", success: true, statusCode: 200});
+            return;
+            //var item = db.collection("uploads").findOne(bsonQuery)
+
+        });
+        db.close();
+    });
+}
+exports.deletePresent=(req,res,err)=>{
+    var present=req.body.present;
+    MongoClient.connect(url, function(err, db) {
+        var bsonQuery={present:present};
+        db.collection("present").remove(bsonQuery,function (err, result) {
+            console.log(err);
+            res.statusCode = 200;
+            res.statusText = "ok";
+            res.send({msg: "Present deleted successfully", success: true, statusCode: 200});
+            return;
+            //var item = db.collection("uploads").findOne(bsonQuery)
+
+        });
+        db.close();
+    });
+}
+
+exports.deleteFile=(req,res,err)=>{
+    var filename=req.body.file_name;
+
+    MongoClient.connect(url, function(err, db) {
+        var bsonQuery={file_name:filename};
+        db.collection("uploads").remove(bsonQuery,function (err, result) {
+            fs.unlink("./uploads/" + filename);
+            console.log(err);
+            res.statusCode = 200;
+            res.statusText = "ok";
+            res.send({msg: "file deleted successfully", success: true, statusCode: 200});
+            return;
+
+        });
+        var bsonmeet={meetings: {bullet_points:filename}};
+        db.collection("meetings").remove(bsonmeet,function (err, result) {
+            console.log(err);
+        });
+        db.close();
+    });
+}
 
 exports.category=(req,res,err)=>{
     var group=req.body.group;
@@ -96,6 +151,7 @@ exports.uploads=(req,res,err)=>{
     var created_by_file=req.body.datas.created_by;
     var meeting_name_file=req.body.datas.meeting_name;
     var email = req.body.datas.email;
+    var name = req.body.datas.name;
     var authToken = req.body.datas.auth_token;
     var tag=req.body.datas.category;
     var filename_file= req.file.filename;
@@ -128,7 +184,7 @@ exports.uploads=(req,res,err)=>{
                 presents: created_by_file,
                 tag: tag,
                 email: email,
-                name: filename_file,
+                name: created_by_file,
                 created_at: new Date(),
                 auth_token: authToken
             }

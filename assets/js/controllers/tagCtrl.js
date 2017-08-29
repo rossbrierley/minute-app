@@ -17,6 +17,22 @@
                 $rootScope.presents = response.data.data;
             });
 
+
+            $scope.deleteTag = function(index) {
+                var tag = $rootScope.tags[index];
+                dataServices.doDeleteTag(tag).then(function (response){
+                    $rootScope.tags.splice(index,1);
+                    console.log(tag);
+                });
+            };
+            $scope.deletePresent = function(index) {
+                var present = $rootScope.presents[index];
+                dataServices.doDeletePresent(present).then(function (response){
+                    $rootScope.presents.splice(index,1);
+                    console.log(present);
+                });
+            };
+
             $rootScope.addtag = function (ev) {
                 $mdDialog.show({
                     controller: addController,

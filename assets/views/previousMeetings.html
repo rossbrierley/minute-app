@@ -8,7 +8,7 @@
                 <span>Filter by Tag: </span>
                 <md-input-container>
                     <md-select ng-model="search.tag.code">
-                        <md-option><em>All</em></md-option>
+                        <md-option ng-value=""><em>All</em></md-option>
                         <md-option ng-repeat="tag in tags" ng-value="tag.code">
                             {{tag.code}}
                         </md-option>

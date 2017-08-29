@@ -24,9 +24,16 @@
             $scope.thisFaculty = '';
             $scope.addFaculty = function (faculty) {
                 if(faculty !== undefined){
-                    faculties.push(faculty);
-                    $scope.newMeeting.presents = faculties.toString();
-                    $scope.thisFaculty = '';
+                    if(!faculties.includes(faculty)){
+                        faculties.push(faculty);
+                        $scope.newMeeting.presents = faculties.toString();
+                        $scope.thisFaculty = '';
+                    }
+                    else{
+                        $mdToast.showSimple('You have already added ' + faculty);
+                        $scope.thisFaculty = '';
+                    }
+
                 }
 
             }

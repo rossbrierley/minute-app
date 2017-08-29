@@ -21,7 +21,7 @@
 			<span>Filter by Tag: </span>
 			<md-input-container>
 				<md-select ng-model="search.file_category">
-					<md-option><em>All</em></md-option>
+					<md-option ng-value=""><em>All</em></md-option>
 					<md-option ng-repeat="tag in tags" ng-value="tag.code">
 						{{tag.code}}
 					</md-option>
@@ -46,15 +46,14 @@
 					<tr md-row md-select md-auto-select ng-repeat="data in file_data | filter: search.file_category">
 						<td md-cell>{{data.created_at | date}}</td>
 						<td md-cell>{{data.created_by}}</td>
-						<td md-cell>{{data.file_category.code}}</td>
+						<td md-cell>{{data.tag.code}}</td>
 						<td md-cell>{{data.meeting_name}}</td>
 						<td md-cell style="text-align: right;">
 							<md-button class="md-icon-button" aria-label="View" ng-click="openDocument($index)">
 								<md-icon class="material-icon">remove_red_eye</md-icon>
 								<md-tooltip md-direction="left">View File</md-tooltip>
 							</md-button>
-
-						</td>
+							</td>
 					</tr>
 
 					</tbody>

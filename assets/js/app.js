@@ -37,7 +37,7 @@
                 controller: 'signupCtrl'
             })
             .state('newMeeting', {
-            	url: '/newMeeting',
+            	url: '/addNewMeeting',
                 templateUrl: '/views/addMeetings.html',
                 controller: 'addMeetingCtrl',
                 resolve : {

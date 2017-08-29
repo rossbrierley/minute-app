@@ -22,6 +22,15 @@
                 doSignIn: function(loginUser) {
                     return $http.post('/login/user', loginUser);
                 },
+                doDeleteTag: function(deleteTag) {
+                    return $http.post('/delete/tag', deleteTag);
+                },
+                doDeletePresent: function(deletePresent) {
+                    return $http.post('/delete/present', deletePresent);
+                },
+                doDeleteFile: function(data) {
+                    return $http.post('/delete/file', data);
+                },
                 doMeeting: function(addMeeting) {
                     return $http.post('/addMeetings/newMeeting', addMeeting);
                 },

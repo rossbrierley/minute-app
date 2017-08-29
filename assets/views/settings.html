@@ -27,6 +27,12 @@
                                     <tr md-row md-select md-auto-select ng-repeat="tag in tags">
                                         <td md-cell>{{tag.group_name}}</td>
                                         <td md-cell>{{tag.code}}</td>
+                                        <td md-cell style="text-align: right;">
+                                            <md-button class="md-icon-button" aria-label="View" ng-click="deleteTag($index)">
+                                                <md-icon class="material-icon">delete_forever</md-icon>
+                                                <md-tooltip md-direction="left">Delete tag</md-tooltip>
+                                            </md-button>
+                                        </td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -46,8 +52,11 @@
                     </br>
                     <div layout="row" layout-wrap layout-margin>
                         <md-card ng-repeat="present in presents" ng-if="!!present.present">
-                            <md-card-content>
+                            <md-card-content layout="row" style="padding-bottom: 0px;">
                                 <p class="md-title"> {{ present.present.toUpperCase() }} </p>
+                                <md-button class="md-icon-button" aria-label="Delete" ng-click="deletePresent($index)" style="margin-top: -5px;padding-top: 0px;">
+                                    <md-icon class="material-icon">delete_forever</md-icon>
+                                </md-button>
                             </md-card-content>
                         </md-card>
                     </div>
